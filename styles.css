@@ -1,0 +1,136 @@
+:root {
+  --bg: #0b1220;
+  --panel: #121b2d;
+  --text: #dbe7ff;
+  --muted: #9cb0d3;
+  --accent: #5ea1ff;
+  --accent-strong: #3b82f6;
+  --border: #22314f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(11, 18, 32, 0.85);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--muted);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--text);
+}
+
+.hero,
+.intro {
+  padding: 4rem 0 2rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.card,
+.cta-banner {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.6rem 0.95rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: white;
+}
+
+.about-layout {
+  padding: 3.5rem 0;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: var(--accent);
+}
