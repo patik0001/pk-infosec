@@ -39,6 +39,13 @@ npm test
 npm run dev
 ```
 
+### Configuration frontend (API URL)
+
+```bash
+cp frontend.config.example.js frontend.config.js
+# puis adapte PK_API_BASE_URL si nécessaire
+```
+
 Détails: `backend/README.md`
 
 ## Note d’intégration Ghost

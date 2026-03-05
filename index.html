@@ -1196,7 +1196,11 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
         <div class="rn-stat"><span class="rn-val">hebdo</span><span class="rn-lbl">Fréquence</span></div>
         <div class="rn-stat"><span class="rn-val">0€</span><span class="rn-lbl">Coût</span></div>
       </div>
-      <a href="#" class="btn-p">S'abonner gratuitement →</a>
+      <form data-newsletter-form data-source="resources_section" style="display:flex;flex-direction:column;gap:8px;min-width:280px">
+        <input name="email" type="email" required placeholder="Votre email pro" style="padding:10px;border:1px solid var(--border2);background:var(--panel);color:var(--white)" />
+        <button type="submit" class="btn-p">S'abonner gratuitement →</button>
+        <small data-form-status style="font-family:var(--mono)" aria-live="polite"></small>
+      </form>
     </div>
   </div>
 </section>
@@ -1249,7 +1253,11 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="nl-t">Reste dans la boucle</div>
       <div class="nl-d" style="font-size:16px;color:rgba(232,244,248,.75)">Reçois les nouvelles analyses et alertes cyber directement dans ta boîte mail.</div>
     </div>
-    <a href="#" class="btn-p">S'abonner gratuitement</a>
+    <form data-newsletter-form data-source="footer_cta" style="display:flex;flex-direction:column;gap:8px;min-width:280px">
+      <input name="email" type="email" required placeholder="email@entreprise.com" style="padding:10px;border:1px solid var(--border2);background:var(--panel);color:var(--white)" />
+      <button type="submit" class="btn-p">S'abonner gratuitement</button>
+      <small data-form-status style="font-family:var(--mono)" aria-live="polite"></small>
+    </form>
   </div>
   <div class="f-grid">
     <div>
@@ -1309,6 +1317,8 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
   </div>
 </div>
 
+<script src="frontend.config.js"></script>
+<script src="frontend.js"></script>
 <script>
 
 function toggleFaq(el){

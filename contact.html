@@ -29,11 +29,15 @@
 
       <section class="two-col">
         <article class="card">
-          <h3>Coordonnées</h3>
-          <p>Email : <a href="mailto:contact@pk-infosec.com">contact@pk-infosec.com</a></p>
-          <p>Téléphone : <a href="tel:+33100000000">+33 1 00 00 00 00</a></p>
-          <p class="meta">Créneau de cadrage: 30 min en visio</p>
-          <a class="btn primary" href="mailto:contact@pk-infosec.com?subject=Demande%20cadrage%20PK%20InfoSec">Demander un audit flash</a>
+          <h3>Demande de contact</h3>
+          <form data-contact-form>
+            <label>Nom<br /><input name="name" required maxlength="120" /></label><br /><br />
+            <label>Email<br /><input name="email" type="email" required maxlength="180" /></label><br /><br />
+            <label>Sujet<br /><input name="subject" required maxlength="180" /></label><br /><br />
+            <label>Message<br /><textarea name="message" required maxlength="4000" rows="5"></textarea></label><br /><br />
+            <button class="btn primary" type="submit">Envoyer</button>
+            <p class="meta" data-form-status aria-live="polite"></p>
+          </form>
         </article>
 
         <article class="card">
@@ -50,5 +54,7 @@
     <footer class="site-footer">
       <div class="container"><p>© 2026 PK InfoSec</p></div>
     </footer>
+    <script src="frontend.config.js"></script>
+    <script src="frontend.js"></script>
   </body>
 </html>
