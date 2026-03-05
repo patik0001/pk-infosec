@@ -46,7 +46,7 @@ details summary:focus-visible {
   outline-offset: 2px;
 }
 
-.container { width: min(1040px, 92%); margin: 0 auto; }
+.container { width: min(960px, 92%); margin: 0 auto; }
 
 .site-header {
   position: sticky;
@@ -92,10 +92,10 @@ nav a:hover, nav a.active {
 }
 
 .hero {
-  padding: 3.8rem 0 2.3rem;
+  padding: 3.4rem 0 2.1rem;
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: .85rem;
   align-items: stretch;
 }
 .cockpit {
@@ -114,10 +114,11 @@ nav a:hover, nav a.active {
 }
 
 .hero-main h1 {
-  font-size: clamp(1.9rem, 3.8vw, 3.3rem);
-  line-height: 1.06;
-  margin: .4rem 0 .75rem;
+  font-size: clamp(1.75rem, 3.2vw, 2.8rem);
+  line-height: 1.08;
+  margin: .35rem 0 .65rem;
   letter-spacing: -0.01em;
+  max-width: 17ch;
 }
 
 .eyebrow {
@@ -211,7 +212,7 @@ nav a:hover, nav a.active {
 .cards {
   margin-top: .85rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap: .8rem;
 }
 
