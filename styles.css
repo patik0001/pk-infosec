@@ -53,9 +53,9 @@ details summary:focus-visible {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--border);
-  background: rgba(6, 11, 22, 0.84);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(0,212,255,.12);
+  background: rgba(6, 11, 22, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0,212,255,.12), 0 10px 30px rgba(0,0,0,.28);
 }
 
 .nav-wrap {
@@ -70,6 +70,9 @@ details summary:focus-visible {
   color: white;
   font-weight: 800;
   letter-spacing: .2px;
+  font-family: Orbitron, Inter, sans-serif;
+  text-transform: uppercase;
+  font-size: .95rem;
 }
 
 nav { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; }
@@ -139,9 +142,10 @@ nav a:hover, nav a.active {
 }
 .hero-main {
   border-radius: 14px;
-  padding: 1.15rem;
+  padding: 1.3rem;
   box-shadow: var(--shadow), var(--glow);
 }
+.hero-main .cta-row { margin-top: 1.35rem; }
 
 .kpi-grid {
   margin-top: .8rem;
@@ -178,6 +182,11 @@ nav a:hover, nav a.active {
 }
 .cta-main {
   box-shadow: 0 0 0 1px rgba(0,212,255,.3), 0 0 28px rgba(0,212,255,.35);
+  font-size: .95rem;
+  padding: .78rem 1.2rem;
+}
+.btn.primary:hover {
+  box-shadow: 0 0 0 1px rgba(0,212,255,.4), 0 0 34px rgba(0,212,255,.42);
 }
 
 .badges { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1rem; }
