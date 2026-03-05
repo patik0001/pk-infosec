@@ -1,124 +1,1489 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PK InfoSec — Cybersécurité & Conformité pour PME</title>
-    <meta name="description" content="PK InfoSec accompagne les PME/ETI sur NIS2, ISO 27001, RGPD et la réduction du risque cyber avec des actions concrètes et mesurables." />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="index.html">PK InfoSec</a>
-        <nav aria-label="Navigation principale">
-          <a href="index.html" class="active">Accueil</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">À propos</a>
-          <a href="contact.html">Contact</a>
-          <a class="btn primary nav-cta" href="contact.html">Réserver un cadrage 30 min</a>
-        </nav>
-      </div>
-    </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PK InfoSec — Cyber Risk Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+ --black: #030508;
+ --surface: #080d12;
+ --panel: #0b1218;
+ --border: #0e2030;
+ --border2: #132840;
+ --cyan: #00e5ff;
+ --cyan-dim: #007a99;
+ --cyan-bg: rgba(0,229,255,0.05);
+ --green: #00ff88;
+ --green-dim:#006633;
+ --red: #ff3355;
+ --amber: #ffaa00;
+ --white: #e8f4f8;
+ --muted: #4a7a8a;
+ --font-mono: 'Share Tech Mono', monospace;
+ --font-ui: 'Rajdhani', sans-serif;
+ --font-head: 'Orbitron', monospace;
+}
 
-    <main>
-      <section class="hero container cockpit">
-        <div class="hero-main panel">
-          <p class="eyebrow">Mission Control — Cyber Risk Operations</p>
-          <h1>Réduisez votre exposition cyber avec une exécution pilotée comme un cockpit de mission.</h1>
-          <p class="hero-lead">
-            PK InfoSec transforme vos signaux faibles en décisions actionnables: priorisation, remédiation et pilotage continu.
-            Un cap clair, des actions traçables, un impact mesurable.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary cta-main" href="contact.html">⚡ Réserver un cadrage 30 min</a>
-            <a class="btn" href="#offres">Voir les offres</a>
-          </div>
-          <div class="badges">
-            <span class="badge">NIS2</span>
-            <span class="badge">ISO 27001</span>
-            <span class="badge">RGPD</span>
-            <span class="badge">PME / ETI</span>
-          </div>
-        </div>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <aside class="hero-panel panel" aria-label="Indicateurs de confiance">
-          <h3>Mission metrics</h3>
-          <p class="meta">Lecture rapide de la posture et des priorités.</p>
-          <div class="kpi-grid">
-            <div class="kpi"><strong>72h</strong><span>plan d’action priorisé</span></div>
-            <div class="kpi"><strong>+40%</strong><span>réduction du backlog critique*</span></div>
-            <div class="kpi"><strong>3 niveaux</strong><span>Audit • Remédiation • Pilotage</span></div>
-            <div class="kpi"><strong>100%</strong><span>actions traçables et suivies</span></div>
-          </div>
-        </aside>
-      </section>
+html { scroll-behavior: smooth; }
 
-      <section class="section container trust-strip" id="proof">
-        <div class="trust-item"><strong>24h</strong><span>pour cadrer votre besoin</span></div>
-        <div class="trust-item"><strong>Top 10</strong><span>OWASP / NIS2 / DORA couverts</span></div>
-        <div class="trust-item"><strong>Action-first</strong><span>priorisation orientée impact</span></div>
-        <div class="trust-item"><strong>PME+</strong><span>méthode pragmatique et scalable</span></div>
-      </section>
+body {
+ background: var(--black);
+ color: var(--white);
+ font-family: var(--font-ui);
+ font-size: 16px;
+ line-height: 1.5;
+ overflow-x: hidden;
+ cursor: crosshair;
+}
 
-      <section class="section container" id="offres">
-        <h2>Offres principales</h2>
-        <p class="section-intro">Trois offres pour passer de l'incertitude à la maîtrise opérationnelle.</p>
-        <div class="cards">
-          <article class="card">
-            <h3>Audit Flash PME</h3>
-            <p>Évaluation rapide de votre exposition + quick wins exploitables immédiatement.</p>
-            <p class="meta">Livrables: score de maturité, top risques, plan 30 jours.</p>
-          </article>
-          <article class="card featured">
-            <p class="meta">Offre recommandée</p>
-            <h3>Diagnostic Conformité</h3>
-            <p>Gap analysis NIS2 / ISO 27001 / RGPD avec priorisation business × effort.</p>
-            <p class="meta">Livrables: état des écarts + roadmap de remédiation.</p>
-          </article>
-          <article class="card">
-            <h3>RSSI as a Service</h3>
-            <p>Pilotage mensuel, gouvernance et suivi KPI pour ancrer la sécurité dans l'opérationnel.</p>
-            <p class="meta">Livrables: comité mensuel, backlog sécurité, reporting direction.</p>
-          </article>
-        </div>
-      </section>
+body::before {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background: repeating-linear-gradient(
+ 0deg,
+ transparent,
+ transparent 2px,
+ rgba(0,0,0,0.08) 2px,
+ rgba(0,0,0,0.08) 4px
+ );
+ pointer-events: none;
+ z-index: 9999;
+}
 
-      <section class="section container method">
-        <h2>Méthode en 4 étapes</h2>
-        <div class="timeline">
-          <article class="timeline-step panel"><span>01</span><div><h3>Cadrage</h3><p>Objectifs business, actifs critiques et contraintes réelles.</p></div></article>
-          <article class="timeline-step panel"><span>02</span><div><h3>Priorisation</h3><p>Quick wins + risques majeurs classés par impact/effort.</p></div></article>
-          <article class="timeline-step panel"><span>03</span><div><h3>Exécution</h3><p>Remédiations ciblées avec cadence courte et preuves d’avancement.</p></div></article>
-          <article class="timeline-step panel"><span>04</span><div><h3>Pilotage</h3><p>KPIs, arbitrages et amélioration continue orientée résultats.</p></div></article>
-        </div>
-      </section>
+body::after {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+ pointer-events: none;
+ opacity: 0.4;
+ z-index: 9998;
+}
 
-      <section class="section container faq">
-        <h2>FAQ</h2>
-        <div class="faq-list">
-          <details open><summary>À qui s’adresse PK InfoSec ?</summary><p>PME, ETI et startups qui veulent une cybersécurité pragmatique et pilotable.</p></details>
-          <details><summary>En combien de temps voit-on des résultats ?</summary><p>Les premiers quick wins sont généralement visibles en 2 à 4 semaines.</p></details>
-          <details><summary>Faites-vous du one-shot ou du suivi ?</summary><p>Les deux: mission ponctuelle ou accompagnement continu.</p></details>
-        </div>
-      </section>
+nav {
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ height: 52px;
+ background: rgba(3,5,8,0.92);
+ backdrop-filter: blur(12px);
+ border-bottom: 1px solid var(--border2);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 28px;
+ z-index: 1000;
+}
 
-      <section class="section container">
-        <div class="proof final-cta">
-          <h2>Prêt à sécuriser ce qui compte vraiment ?</h2>
-          <p>Réservez un cadrage 30 minutes pour repartir avec une trajectoire claire et actionnable.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="contact.html">Réserver un cadrage 30 min</a>
-            <a class="btn" href="services.html">Voir les offres</a>
-          </div>
-        </div>
-      </section>
-    </main>
+.nav-logo {
+ font-family: var(--font-head);
+ font-size: 13px;
+ font-weight: 700;
+ color: var(--cyan);
+ letter-spacing: 0.15em;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 PK InfoSec — Sécurité claire, résultats mesurables.</p>
-      </div>
-    </footer>
-  </body>
+.nav-logo::before {
+ content: '';
+ width: 8px; height: 8px;
+ background: var(--cyan);
+ border-radius: 50%;
+ box-shadow: 0 0 8px var(--cyan);
+ animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+ 0%,100% { opacity: 1; box-shadow: 0 0 8px var(--cyan); }
+ 50% { opacity: 0.4; box-shadow: 0 0 2px var(--cyan); }
+}
+
+.nav-links {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ list-style: none;
+}
+
+.nav-links a {
+ font-family: var(--font-ui);
+ font-size: 13px;
+ font-weight: 600;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: var(--muted);
+ text-decoration: none;
+ padding: 6px 14px;
+ border: 1px solid transparent;
+ transition: all 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+ color: var(--cyan);
+ border-color: var(--border2);
+ background: var(--cyan-bg);
+}
+
+.nav-cta {
+ font-family: var(--font-ui);
+ font-size: 12px;
+ font-weight: 700;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ color: var(--black);
+ background: var(--cyan);
+ border: none;
+ padding: 8px 18px;
+ cursor: pointer;
+ clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+ transition: all 0.2s;
+}
+
+.nav-cta:hover {
+ background: var(--white);
+ transform: translateY(-1px);
+}
+
+.status-bar {
+ margin-top: 52px;
+ background: var(--surface);
+ border-bottom: 1px solid var(--border);
+ padding: 0 28px;
+ height: 36px;
+ display: flex;
+ align-items: center;
+ gap: 24px;
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--muted);
+ overflow: hidden;
+}
+
+.status-item {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ white-space: nowrap;
+}
+.status-dot {
+ width: 6px; height: 6px;
+ border-radius: 50%;
+ flex-shrink: 0;
+}
+.status-dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.status-dot.amber { background: var(--amber); box-shadow: 0 0 6px var(--amber); animation: blink 1.4s ease-in-out infinite; }
+.status-dot.red { background: var(--red); box-shadow: 0 0 6px var(--red); animation: blink 0.8s ease-in-out infinite; }
+
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
+
+.ticker-wrap {
+ flex: 1;
+ overflow: hidden;
+ height: 100%;
+ display: flex;
+ align-items: center;
+}
+
+.ticker {
+ display: flex;
+ gap: 48px;
+ animation: ticker-scroll 30s linear infinite;
+ white-space: nowrap;
+ color: var(--cyan-dim);
+}
+
+@keyframes ticker-scroll {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(-50%); }
+}
+
+.hero {
+ min-height: 100vh;
+ display: grid;
+ grid-template-columns: 1fr 480px;
+ gap: 0;
+ position: relative;
+ overflow: hidden;
+}
+
+.hero::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background-image:
+ linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+ background-size: 40px 40px;
+ mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero-left {
+ padding: 80px 60px 60px 60px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ position: relative;
+ z-index: 1;
+}
+
+.breadcrumb {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--cyan);
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ margin-bottom: 28px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.breadcrumb::before {
+ content: '▶️';
+ font-size: 8px;
+}
+
+.hero-title {
+ font-family: var(--font-head);
+ font-size: clamp(28px, 3.5vw, 48px);
+ font-weight: 900;
+ line-height: 1.1;
+ letter-spacing: -0.02em;
+ color: var(--white);
+ margin-bottom: 24px;
+}
+
+.hero-title .accent {
+ color: var(--cyan);
+ text-shadow: 0 0 30px rgba(0,229,255,0.4);
+}
+
+.hero-title .dim { color: var(--muted); }
+
+.hero-desc {
+ font-family: var(--font-ui);
+ font-size: 16px;
+ font-weight: 400;
+ color: var(--muted);
+ max-width: 500px;
+ line-height: 1.7;
+ margin-bottom: 40px;
+}
+
+.hero-desc strong {
+ color: var(--white);
+ font-weight: 600;
+}
+
+.hero-actions {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+ flex-wrap: wrap;
+}
+
+.btn-primary {
+ font-family: var(--font-ui);
+ font-size: 13px;
+ font-weight: 700;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ color: var(--black);
+ background: var(--cyan);
+ border: none;
+ padding: 14px 28px;
+ cursor: pointer;
+ clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+ transition: all 0.25s;
+ text-decoration: none;
+ display: inline-block;
+}
+
+.btn-primary:hover {
+ background: var(--white);
+ transform: translateY(-2px);
+ box-shadow: 0 8px 24px rgba(0,229,255,0.3);
+}
+
+.btn-secondary {
+ font-family: var(--font-ui);
+ font-size: 13px;
+ font-weight: 600;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ color: var(--cyan);
+ background: transparent;
+ border: 1px solid var(--border2);
+ padding: 13px 24px;
+ cursor: pointer;
+ transition: all 0.25s;
+ text-decoration: none;
+ display: inline-block;
+}
+
+.btn-secondary:hover {
+ border-color: var(--cyan);
+ background: var(--cyan-bg);
+}
+
+.compliance-tags {
+ display: flex;
+ gap: 8px;
+ flex-wrap: wrap;
+ margin-top: 32px;
+}
+
+.tag {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--cyan-dim);
+ border: 1px solid var(--border2);
+ padding: 4px 10px;
+ letter-spacing: 0.1em;
+ background: var(--cyan-bg);
+ cursor: default;
+ transition: all 0.2s;
+}
+
+.tag:hover {
+ color: var(--cyan);
+ border-color: var(--cyan);
+}
+
+.hero-right {
+ background: var(--surface);
+ border-left: 1px solid var(--border2);
+ padding: 80px 28px 40px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ position: relative;
+ z-index: 1;
+}
+
+.panel-label {
+ font-family: var(--font-mono);
+ font-size: 9px;
+ letter-spacing: 0.25em;
+ text-transform: uppercase;
+ color: var(--cyan-dim);
+ margin-bottom: 4px;
+}
+
+.radar-widget {
+ background: var(--panel);
+ border: 1px solid var(--border2);
+ padding: 16px;
+ position: relative;
+ overflow: hidden;
+}
+
+.radar-widget::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0;
+ width: 100%; height: 2px;
+ background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+ animation: scan-h 3s ease-in-out infinite;
+}
+
+@keyframes scan-h {
+ 0%,100% { transform: scaleX(0); opacity: 0; }
+ 50% { transform: scaleX(1); opacity: 1; }
+}
+
+.radar-container {
+ position: relative;
+ width: 140px;
+ height: 140px;
+ margin: 0 auto 16px;
+}
+
+.radar-svg {
+ width: 100%; height: 100%;
+}
+
+.radar-sweep {
+ transform-origin: center;
+ animation: radar-rotate 3s linear infinite;
+}
+
+@keyframes radar-rotate {
+ from { transform: rotate(0deg); }
+ to { transform: rotate(360deg); }
+}
+
+.radar-blip {
+ animation: blip-fade 3s ease-in-out infinite;
+}
+
+@keyframes blip-fade {
+ 0%,70%,100% { opacity: 0; }
+ 75% { opacity: 1; }
+ 85% { opacity: 0.6; }
+}
+
+.radar-stats {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 8px;
+}
+
+.radar-stat {
+ text-align: center;
+}
+
+.radar-stat .val {
+ font-family: var(--font-head);
+ font-size: 20px;
+ font-weight: 700;
+ color: var(--cyan);
+ line-height: 1;
+ display: block;
+}
+
+.radar-stat .val.red { color: var(--red); }
+.radar-stat .val.amber { color: var(--amber); }
+.radar-stat .val.green { color: var(--green); }
+
+.radar-stat .lbl {
+ font-family: var(--font-mono);
+ font-size: 9px;
+ color: var(--muted);
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+}
+
+.metrics-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 8px;
+}
+
+.metric-card {
+ background: var(--panel);
+ border: 1px solid var(--border);
+ padding: 12px;
+ position: relative;
+ overflow: hidden;
+ transition: border-color 0.2s;
+}
+
+.metric-card:hover {
+ border-color: var(--cyan-dim);
+}
+
+.metric-card::after {
+ content: '';
+ position: absolute;
+ bottom: 0; left: 0; right: 0;
+ height: 2px;
+ background: var(--cyan);
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.4s ease;
+}
+
+.metric-card:hover::after {
+ transform: scaleX(1);
+}
+
+.metric-val {
+ font-family: var(--font-head);
+ font-size: 22px;
+ font-weight: 700;
+ color: var(--white);
+ line-height: 1;
+ margin-bottom: 2px;
+}
+
+.metric-val .unit {
+ font-size: 12px;
+ color: var(--cyan);
+}
+
+.metric-delta {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--green);
+ margin-bottom: 4px;
+}
+
+.metric-delta.neg { color: var(--red); }
+
+.metric-lbl {
+ font-family: var(--font-mono);
+ font-size: 9px;
+ color: var(--muted);
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+}
+
+.threat-panel {
+ background: var(--panel);
+ border: 1px solid var(--border2);
+ padding: 14px;
+}
+
+.threat-bar-wrap {
+ height: 8px;
+ background: var(--border);
+ margin: 10px 0 6px;
+ position: relative;
+ overflow: hidden;
+}
+
+.threat-bar-fill {
+ height: 100%;
+ background: linear-gradient(90deg, var(--green), var(--amber) 60%, var(--red));
+ width: 38%;
+ position: relative;
+}
+
+.threat-bar-fill::after {
+ content: '';
+ position: absolute;
+ right: 0; top: 0; bottom: 0;
+ width: 2px;
+ background: white;
+ box-shadow: 0 0 8px white;
+}
+
+.threat-labels {
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--font-mono);
+ font-size: 9px;
+ color: var(--muted);
+ letter-spacing: 0.1em;
+}
+
+.log-terminal {
+ background: var(--panel);
+ border: 1px solid var(--border2);
+ padding: 12px;
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--muted);
+ line-height: 1.8;
+ max-height: 110px;
+ overflow: hidden;
+ position: relative;
+}
+
+.log-terminal::after {
+ content: '';
+ position: absolute;
+ bottom: 0; left: 0; right: 0;
+ height: 40px;
+ background: linear-gradient(transparent, var(--panel));
+}
+.log-line { display: flex; gap: 10px; }
+.log-time { color: var(--cyan-dim); flex-shrink: 0; }
+.log-msg.ok { color: var(--green); }
+.log-msg.warn { color: var(--amber); }
+.log-msg.info { color: var(--white); }
+
+section {
+ padding: 80px 60px;
+ position: relative;
+}
+
+section::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background-image:
+ linear-gradient(rgba(0,229,255,0.02) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(0,229,255,0.02) 1px, transparent 1px);
+ background-size: 60px 60px;
+ pointer-events: none;
+}
+
+.section-header {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+ margin-bottom: 48px;
+}
+
+.section-label {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--cyan);
+ letter-spacing: 0.3em;
+ text-transform: uppercase;
+}
+
+.section-title {
+ font-family: var(--font-head);
+ font-size: clamp(20px, 2.5vw, 30px);
+ font-weight: 700;
+ color: var(--white);
+ letter-spacing: 0.05em;
+}
+
+.section-line {
+ flex: 1;
+ height: 1px;
+ background: linear-gradient(90deg, var(--border2), transparent);
+}
+
+.offers-section {
+ background: var(--surface);
+ border-top: 1px solid var(--border);
+ border-bottom: 1px solid var(--border);
+}
+
+.offers-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1px;
+ background: var(--border);
+ border: 1px solid var(--border);
+}
+
+.offer-card {
+ background: var(--panel);
+ padding: 32px 28px;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ transition: background 0.3s;
+}
+
+.offer-card:hover {
+ background: var(--surface);
+}
+
+.offer-card.featured {
+ background: rgba(0,229,255,0.04);
+}
+
+.offer-card.featured::before {
+ content: 'RECOMMANDÉ';
+ position: absolute;
+ top: 16px; right: -24px;
+ font-family: var(--font-mono);
+ font-size: 9px;
+ letter-spacing: 0.2em;
+ color: var(--black);
+ background: var(--cyan);
+ padding: 3px 40px;
+ transform: rotate(45deg);
+}
+
+.offer-number {
+ font-family: var(--font-head);
+ font-size: 11px;
+ color: var(--cyan-dim);
+ letter-spacing: 0.3em;
+ margin-bottom: 16px;
+}
+
+.offer-name {
+ font-family: var(--font-head);
+ font-size: 17px;
+ font-weight: 700;
+ color: var(--white);
+ letter-spacing: 0.05em;
+ margin-bottom: 8px;
+ line-height: 1.2;
+}
+
+.offer-desc {
+ font-family: var(--font-ui);
+ font-size: 14px;
+ color: var(--muted);
+ line-height: 1.6;
+ margin-bottom: 20px;
+}
+
+.offer-deliverable {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--cyan-dim);
+ padding: 8px 12px;
+ border: 1px solid var(--border);
+ border-left: 2px solid var(--cyan);
+ line-height: 1.6;
+ background: var(--cyan-bg);
+}
+
+.offer-cta {
+ margin-top: 20px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--cyan);
+ cursor: pointer;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ transition: gap 0.2s;
+}
+
+.offer-card:hover .offer-cta { gap: 14px; }
+.offer-cta::after { content: '→'; }
+
+.offer-card::after {
+ content: '';
+ position: absolute;
+ bottom: 0; right: 0;
+ width: 20px; height: 20px;
+ border-bottom: 1px solid var(--border2);
+ border-right: 1px solid var(--border2);
+}
+
+.method-section {
+ background: var(--black);
+}
+
+.method-steps {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 1px;
+ background: var(--border);
+ border: 1px solid var(--border);
+}
+
+.method-step {
+ background: var(--panel);
+ padding: 32px 24px;
+ position: relative;
+ overflow: hidden;
+ transition: background 0.3s;
+}
+
+.method-step:hover {
+ background: rgba(0,229,255,0.03);
+}
+
+.step-num {
+ font-family: var(--font-head);
+ font-size: 48px;
+ font-weight: 900;
+ color: var(--border2);
+ line-height: 1;
+ margin-bottom: 16px;
+ transition: color 0.3s;
+}
+
+.method-step:hover .step-num {
+ color: rgba(0,229,255,0.15);
+}
+
+.step-icon {
+ font-size: 20px;
+ margin-bottom: 12px;
+ display: block;
+}
+
+.step-name {
+ font-family: var(--font-head);
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--cyan);
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ margin-bottom: 8px;
+}
+
+.step-desc {
+ font-family: var(--font-ui);
+ font-size: 14px;
+ color: var(--muted);
+ line-height: 1.6;
+}
+
+.step-connector {
+ position: absolute;
+ right: -1px;
+ top: 50%;
+ transform: translateY(-50%);
+ width: 12px;
+ height: 12px;
+ background: var(--cyan);
+ clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+ z-index: 2;
+}
+
+.method-step:last-child .step-connector { display: none; }
+
+.faq-section {
+ background: var(--surface);
+ border-top: 1px solid var(--border);
+ border-bottom: 1px solid var(--border);
+}
+
+.faq-list {
+ max-width: 800px;
+ display: flex;
+ flex-direction: column;
+ gap: 1px;
+ background: var(--border);
+ border: 1px solid var(--border);
+}
+
+.faq-item {
+ background: var(--panel);
+ overflow: hidden;
+}
+
+.faq-question {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px 24px;
+ cursor: pointer;
+ font-family: var(--font-ui);
+ font-size: 15px;
+ font-weight: 600;
+ color: var(--white);
+ letter-spacing: 0.02em;
+ user-select: none;
+ transition: color 0.2s;
+}
+
+.faq-question:hover {
+ color: var(--cyan);
+}
+
+.faq-icon {
+ font-family: var(--font-mono);
+ font-size: 18px;
+ color: var(--cyan);
+ transition: transform 0.3s;
+ flex-shrink: 0;
+}
+
+.faq-item.open .faq-icon {
+ transform: rotate(45deg);
+}
+
+.faq-answer {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.4s ease, padding 0.3s;
+ font-family: var(--font-ui);
+ font-size: 14px;
+ color: var(--muted);
+ line-height: 1.7;
+ padding: 0 24px;
+ border-top: 0px solid var(--border);
+}
+
+.faq-item.open .faq-answer {
+ max-height: 200px;
+ padding: 16px 24px 20px;
+ border-top: 1px solid var(--border);
+}
+
+.cta-section {
+ background: var(--black);
+ text-align: center;
+ padding: 100px 60px;
+ position: relative;
+ overflow: hidden;
+}
+
+.cta-section::before {
+ content: '';
+ position: absolute;
+ top: 50%; left: 50%;
+ transform: translate(-50%, -50%);
+ width: 600px; height: 600px;
+ background: radial-gradient(circle, rgba(0,229,255,0.06) 0%, transparent 70%);
+ pointer-events: none;
+}
+
+.cta-eyebrow {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--cyan);
+ letter-spacing: 0.3em;
+ text-transform: uppercase;
+ margin-bottom: 20px;
+}
+
+.cta-title {
+ font-family: var(--font-head);
+ font-size: clamp(24px, 3vw, 40px);
+ font-weight: 900;
+ color: var(--white);
+ line-height: 1.15;
+ margin-bottom: 16px;
+ letter-spacing: -0.02em;
+}
+
+.cta-title .accent { color: var(--cyan); }
+
+.cta-desc {
+ font-family: var(--font-ui);
+ font-size: 15px;
+ color: var(--muted);
+ max-width: 440px;
+ margin: 0 auto 36px;
+ line-height: 1.7;
+}
+
+.cta-actions {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 16px;
+ flex-wrap: wrap;
+}
+
+footer {
+ background: var(--surface);
+ border-top: 1px solid var(--border);
+ padding: 60px 60px 32px;
+}
+
+.footer-newsletter {
+ background: var(--panel);
+ border: 1px solid var(--border2);
+ padding: 40px;
+ margin-bottom: 48px;
+ display: grid;
+ grid-template-columns: 1fr auto;
+ gap: 32px;
+ align-items: center;
+ position: relative;
+ overflow: hidden;
+}
+
+.footer-newsletter::before {
+ content: '';
+ position: absolute;
+ left: 0; top: 0; bottom: 0;
+ width: 3px;
+ background: linear-gradient(180deg, var(--cyan), transparent);
+}
+
+.nl-icon {
+ font-size: 28px;
+ margin-bottom: 8px;
+ display: block;
+}
+
+.nl-title {
+ font-family: var(--font-head);
+ font-size: 20px;
+ font-weight: 700;
+ color: var(--white);
+ margin-bottom: 4px;
+}
+
+.nl-desc {
+ font-family: var(--font-ui);
+ font-size: 14px;
+ color: var(--muted);
+}
+
+.footer-grid {
+ display: grid;
+ grid-template-columns: 1.5fr repeat(3, 1fr);
+ gap: 40px;
+ margin-bottom: 48px;
+}
+
+.footer-brand-logo {
+ font-family: var(--font-head);
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--cyan);
+ letter-spacing: 0.15em;
+ margin-bottom: 12px;
+}
+
+.footer-brand-desc {
+ font-family: var(--font-ui);
+ font-size: 13px;
+ color: var(--muted);
+ line-height: 1.6;
+}
+
+.footer-col-title {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--cyan-dim);
+ letter-spacing: 0.25em;
+ text-transform: uppercase;
+ margin-bottom: 16px;
+}
+
+.footer-links {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
+}
+
+.footer-links a {
+ font-family: var(--font-ui);
+ font-size: 13px;
+ color: var(--muted);
+ text-decoration: none;
+ transition: color 0.2s;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+}
+
+.footer-links a::before {
+ content: '›';
+ color: var(--cyan-dim);
+ font-size: 16px;
+ line-height: 1;
+}
+
+.footer-links a:hover {
+ color: var(--cyan);
+}
+
+.footer-bottom {
+ border-top: 1px solid var(--border);
+ padding-top: 24px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--muted);
+ letter-spacing: 0.1em;
+}
+
+.fade-up {
+ opacity: 0;
+ transform: translateY(24px);
+ transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+ opacity: 1;
+ transform: translateY(0);
+}
+
+.count-up { display: inline-block; }
+
+.hline {
+ height: 1px;
+ background: linear-gradient(90deg, var(--cyan), transparent);
+ margin: 0;
+}
+
+.bracket {
+ position: absolute;
+ width: 16px; height: 16px;
+}
+.bracket-tl { top: 0; left: 0; border-top: 1px solid var(--cyan-dim); border-left: 1px solid var(--cyan-dim); }
+.bracket-tr { top: 0; right: 0; border-top: 1px solid var(--cyan-dim); border-right: 1px solid var(--cyan-dim); }
+.bracket-bl { bottom: 0; left: 0; border-bottom: 1px solid var(--cyan-dim); border-left: 1px solid var(--cyan-dim); }
+.bracket-br { bottom: 0; right: 0; border-bottom: 1px solid var(--cyan-dim); border-right: 1px solid var(--cyan-dim); }
+
+@media (max-width: 1024px) {
+ .hero { grid-template-columns: 1fr; }
+ .hero-right { display: none; }
+ .offers-grid { grid-template-columns: 1fr; }
+ .method-steps { grid-template-columns: 1fr 1fr; }
+ .footer-grid { grid-template-columns: 1fr 1fr; }
+ section { padding: 60px 28px; }
+ .hero-left { padding: 60px 28px; }
+}
+
+@media (max-width: 640px) {
+ .method-steps { grid-template-columns: 1fr; }
+ .footer-grid { grid-template-columns: 1fr; }
+ .footer-newsletter { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="nav-logo">PK INFOSEC</div>
+ <ul class="nav-links">
+ <li><a href="#" class="active">Accueil</a></li>
+ <li><a href="#services">Services</a></li>
+ <li><a href="#methode">Méthode</a></li>
+ <li><a href="#faq">FAQ</a></li>
+ <li><a href="#">À propos</a></li>
+ <li><a href="#">Contact</a></li>
+ </ul>
+ <button class="nav-cta">Réserver un cadrage 30 min</button>
+</nav>
+
+<div class="status-bar">
+ <div class="status-item">
+ <span class="status-dot green"></span>
+ <span>SYSTÈMES OPÉRATIONNELS</span>
+ </div>
+ <div class="status-item">
+ <span class="status-dot amber"></span>
+ <span>CVE ACTIFS : 847</span>
+ </div>
+ <div class="status-item">
+ <span class="status-dot red"></span>
+ <span>INCIDENTS EU 24H : 12</span>
+ </div>
+ <div class="ticker-wrap">
+ <div class="ticker" id="ticker">
+ <span>▸ CVE-2025-0411 — 7-Zip Mark-of-the-Web bypass — CVSS 7.0</span>
+ <span>▸ DORA : deadline conformité 17 jan 2025 — PME financières sous pression</span>
+ <span>▸ NIS2 : 1er bilan transposition attendu par la Commission Européenne</span>
+ <span>▸ ISO 27001 : révision 2022 — délai transition oct 2025</span>
+ <span>▸ ENISA Threat Report 2025 : ransomware +40% sur PME/ETI européennes</span>
+ <span>▸ CVE-2025-0411 — 7-Zip Mark-of-the-Web bypass — CVSS 7.0</span>
+ <span>▸ DORA : deadline conformité 17 jan 2025 — PME financières sous pression</span>
+ <span>▸ NIS2 : 1er bilan transposition attendu par la Commission Européenne</span>
+ <span>▸ ISO 27001 : révision 2022 — délai transition oct 2025</span>
+ <span>▸ ENISA Threat Report 2025 : ransomware +40% sur PME/ETI européennes</span>
+ </div>
+ </div>
+</div>
+
+<div class="hero">
+ <div class="hero-left">
+ <div class="breadcrumb">MISSION CONTROL — CYBER RISK OPERATIONS</div>
+ <h1 class="hero-title">
+ Réduisez votre<br>
+ <span class="accent">exposition cyber</span><br>
+ avec une exécution<br>
+ <span class="dim">pilotée comme un</span><br>
+ cockpit de mission.
+ </h1>
+ <p class="hero-desc">
+ PK InfoSec transforme vos signaux faibles en <strong>décisions actionnables</strong> :
+ prévention, remédiation et pilotage continu. Un cap clair, des actions
+ traçables, un impact mesurable.
+ </p>
+ <div class="hero-actions">
+ <a href="#" class="btn-primary">Réserver un cadrage 30 min</a>
+ <a href="#services" class="btn-secondary">Voir les offres</a>
+ </div>
+ <div class="compliance-tags">
+ <span class="tag">NIS2</span>
+ <span class="tag">ISO 27001</span>
+ <span class="tag">DORA</span>
+ <span class="tag">PME / ETI</span>
+ <span class="tag">EBIOS RM</span>
+ <span class="tag">SOC2</span>
+ <span class="tag">CISSP</span>
+ <span class="tag">CEH</span>
+ </div>
+ </div>
+
+ <div class="hero-right">
+ <div class="panel-label">◈ THREAT RADAR — LIVE</div>
+ <div class="radar-widget">
+ <div class="radar-container">
+ <svg class="radar-svg" viewBox="0 0 140 140">
+ <circle cx="70" cy="70" r="65" fill="none" stroke="#0e2030" stroke-width="1"/>
+ <circle cx="70" cy="70" r="48" fill="none" stroke="#0e2030" stroke-width="1"/>
+ <circle cx="70" cy="70" r="30" fill="none" stroke="#0e2030" stroke-width="1"/>
+ <circle cx="70" cy="70" r="12" fill="none" stroke="#0e2030" stroke-width="1"/>
+ <line x1="70" y1="5" x2="70" y2="135" stroke="#0e2030" stroke-width="0.5"/>
+ <line x1="5" y1="70" x2="135" y2="70" stroke="#0e2030" stroke-width="0.5"/>
+ <line x1="24" y1="24" x2="116" y2="116" stroke="#0a1820" stroke-width="0.5"/>
+ <line x1="116" y1="24" x2="24" y2="116" stroke="#0a1820" stroke-width="0.5"/>
+ <circle cx="70" cy="70" r="3" fill="#00e5ff"/>
+ <g class="radar-sweep">
+ <path d="M70,70 L70,5 A65,65 0 0,1 130,90 Z" fill="url(#sweep-grad)" opacity="0.6"/>
+ </g>
+ <circle class="radar-blip" cx="95" cy="42" r="3" fill="#ff3355" style="animation-delay:0.5s"/>
+ <circle class="radar-blip" cx="52" cy="88" r="2" fill="#ffaa00" style="animation-delay:1.2s"/>
+ <circle class="radar-blip" cx="105" cy="75" r="2.5" fill="#ff3355" style="animation-delay:2s"/>
+ <circle class="radar-blip" cx="38" cy="50" r="2" fill="#00ff88" style="animation-delay:0.8s"/>
+ <defs>
+ <radialGradient id="sweep-grad" cx="0%" cy="100%" r="100%">
+ <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+ <stop offset="70%" stop-color="#00e5ff" stop-opacity="0.15"/>
+ <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.3"/>
+ </radialGradient>
+ </defs>
+ </svg>
+ </div>
+ <div class="radar-stats">
+ <div class="radar-stat">
+ <span class="val red" id="cnt-threats">14</span>
+ <span class="lbl">Menaces actives</span>
+ </div>
+ <div class="radar-stat">
+ <span class="val amber">3</span>
+ <span class="lbl">Critiques</span>
+ </div>
+ <div class="radar-stat">
+ <span class="val green">847</span>
+ <span class="lbl">CVE suivis</span>
+ </div>
+ <div class="radar-stat">
+ <span class="val">72h</span>
+ <span class="lbl">Plan livré en</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="panel-label">◈ MISSION METRICS</div>
+ <div class="metrics-grid">
+ <div class="metric-card" style="position:relative">
+ <div class="bracket bracket-tl"></div>
+ <div class="bracket bracket-br"></div>
+ <div class="metric-val">+40<span class="unit">%</span></div>
+ <div class="metric-delta">▲ réduction du backlog</div>
+ <div class="metric-lbl">Cyber debt</div>
+ </div>
+ <div class="metric-card" style="position:relative">
+ <div class="bracket bracket-tl"></div>
+ <div class="bracket bracket-br"></div>
+ <div class="metric-val">100<span class="unit">%</span></div>
+ <div class="metric-delta green">✓ tracé & suivi</div>
+ <div class="metric-lbl">Actions</div>
+ </div>
+ <div class="metric-card" style="position:relative">
+ <div class="bracket bracket-tl"></div>
+ <div class="bracket bracket-br"></div>
+ <div class="metric-val">3<span class="unit">niv</span></div>
+ <div class="metric-delta">Audit → Remédiation → Pilotage</div>
+ <div class="metric-lbl">Profondeur</div>
+ </div>
+ <div class="metric-card" style="position:relative">
+ <div class="bracket bracket-tl"></div>
+ <div class="bracket bracket-br"></div>
+ <div class="metric-val">72<span class="unit">h</span></div>
+ <div class="metric-delta green">⚡️ action-first</div>
+ <div class="metric-lbl">Premier plan</div>
+ </div>
+ </div>
+
+ <div class="threat-panel">
+ <div class="panel-label">◈ THREAT LEVEL — PME FR</div>
+ <div class="threat-bar-wrap">
+ <div class="threat-bar-fill"></div>
+ </div>
+ <div class="threat-labels">
+ <span>FAIBLE</span>
+ <span>MODÉRÉ ◄</span>
+ <span>CRITIQUE</span>
+ </div>
+ </div>
+
+ <div class="log-terminal">
+ <div class="log-line"><span class="log-time">09:14</span><span class="log-msg ok">✓ ISO 27001 gap analysis — livrée</span></div>
+ <div class="log-line"><span class="log-time">10:32</span><span class="log-msg warn">⚠️ CVE-2025-0411 — patch requis</span></div>
+ <div class="log-line"><span class="log-time">11:05</span><span class="log-msg info">→ NIS2 audit démarré — PME client</span></div>
+ <div class="log-line"><span class="log-time">13:47</span><span class="log-msg ok">✓ DORA roadmap — validée direction</span></div>
+ <div class="log-line"><span class="log-time">14:20</span><span class="log-msg warn">⚠️ Phishing campagne — secteur finance</span></div>
+ </div>
+ </div>
+</div>
+
+<section class="offers-section" id="services">
+ <div class="section-header fade-up">
+ <span class="section-label">// 01</span>
+ <h2 class="section-title">Offres principales</h2>
+ <div class="section-line"></div>
+ <span class="section-label">Trois offres pour passer de l'incertitude à la maîtrise opérationnelle.</span>
+ </div>
+
+ <div class="offers-grid fade-up">
+ <div class="offer-card">
+ <div class="offer-number">OF-01 / AUDIT</div>
+ <div class="offer-name">Audit Flash PME</div>
+ <div class="offer-desc">Évaluation rapide de votre exposition + quick wins exploitables immédiatement.</div>
+ <div class="offer-deliverable">Livrable : score de maturité, top risques,<br>plan 30 jours.</div>
+ <div class="offer-cta">Démarrer l'audit</div>
+ </div>
+ <div class="offer-card featured">
+ <div class="offer-number">OF-02 / CONFORMITÉ</div>
+ <div class="offer-name">Diagnostic Conformité</div>
+ <div class="offer-desc">Gap analysis NIS2 / ISO 27001 / RGPD avec priorisation business × effort.</div>
+ <div class="offer-deliverable">Livrable : état des écarts + roadmap de<br>remédiation.</div>
+ <div class="offer-cta">Voir cette offre</div>
+ </div>
+ <div class="offer-card">
+ <div class="offer-number">OF-03 / PILOTAGE</div>
+ <div class="offer-name">RSSI as a Service</div>
+ <div class="offer-desc">Pilotage mensuel, gouvernance et suivi KPI pour ancrer la sécurité dans l'opérationnel.</div>
+ <div class="offer-deliverable">Livrable : comité mensuel, security,<br>reporting direction.</div>
+ <div class="offer-cta">En savoir plus</div>
+ </div>
+ </div>
+</section>
+
+<section class="method-section" id="methode">
+ <div class="section-header fade-up">
+ <span class="section-label">// 02</span>
+ <h2 class="section-title">Méthode en 4 étapes</h2>
+ <div class="section-line"></div>
+ </div>
+
+ <div class="method-steps fade-up">
+ <div class="method-step">
+ <div class="step-num">01</div>
+ <span class="step-icon">⊕</span>
+ <div class="step-name">Cadrage</div>
+ <div class="step-desc">Objectifs business, actifs critiques et contraintes réelles.</div>
+ <div class="step-connector"></div>
+ </div>
+ <div class="method-step">
+ <div class="step-num">02</div>
+ <span class="step-icon">⊗</span>
+ <div class="step-name">Priorisation</div>
+ <div class="step-desc">Quick wins + risques majeurs classés par impact/effort.</div>
+ <div class="step-connector"></div>
+ </div>
+ <div class="method-step">
+ <div class="step-num">03</div>
+ <span class="step-icon">⊘</span>
+ <div class="step-name">Exécution</div>
+ <div class="step-desc">Remédiations ciblées avec cadence courte et preuves d'avancement.</div>
+ <div class="step-connector"></div>
+ </div>
+ <div class="method-step">
+ <div class="step-num">04</div>
+ <span class="step-icon">◎</span>
+ <div class="step-name">Pilotage</div>
+ <div class="step-desc">KPIs, arbitrages et amélioration continue orientée résultats.</div>
+ </div>
+ </div>
+</section>
+
+<section class="faq-section" id="faq">
+ <div class="section-header fade-up">
+ <span class="section-label">// 03</span>
+ <h2 class="section-title">Questions fréquentes</h2>
+ <div class="section-line"></div>
+ </div>
+
+ <div class="faq-list fade-up">
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFaq(this)">À qui s'adresse PK InfoSec ?<span class="faq-icon">+</span></div>
+ <div class="faq-answer">PME, ETI et startups qui veulent une cybersécurité pragmatique et pilotable. Pas de jargon inutile — uniquement des actions concrètes adaptées à votre taille, votre secteur et vos contraintes réelles.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFaq(this)">En combien de temps voit-on des résultats ?<span class="faq-icon">+</span></div>
+ <div class="faq-answer">Un plan d'action priorisé est livré sous 72h après le cadrage. Les premiers quick wins sont généralement adressables en moins de 30 jours. La conformité complète (ISO 27001, NIS2) s'inscrit dans un horizon de 3 à 9 mois selon l'état de départ.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFaq(this)">Faites-vous du one-shot ou du suivi ?<span class="faq-icon">+</span></div>
+ <div class="faq-answer">Les deux. L'Audit Flash est un engagement ponctuel avec livrable immédiat. Le RSSI as a Service est un accompagnement continu mensuel. Le Diagnostic Conformité peut rester one-shot ou s'enchaîner avec le pilotage selon vos besoins.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-question" onclick="toggleFaq(this)">Quels référentiels maîtrisez-vous ?<span class="faq-icon">+</span></div>
+ <div class="faq-answer">NIS2, ISO 27001 (en cours de certification LA/LI), DORA, RGPD, EBIOS RM, SOC2. Certifications actives : CEH, CCNA, CCNP. CISSP en cours (juillet 2026). CCIE prévu 2027.</div>
+ </div>
+ </div>
+</section>
+
+<section class="cta-section">
+ <div class="cta-eyebrow">◈ PRÊT À SÉCURISER CE QUI COMPTE VRAIMENT ?</div>
+ <h2 class="cta-title">Réservez un cadrage 30 min pour<br>repartir avec une <span class="accent">trajectoire claire</span><br>et actionnable.</h2>
+ <p class="cta-desc">Aucun engagement. Un échange structuré pour évaluer votre exposition et identifier vos priorités immédiates.</p>
+ <div class="cta-actions">
+ <a href="#" class="btn-primary">Réserver un cadrage 30 min</a>
+ <a href="#services" class="btn-secondary">Voir les offres</a>
+ </div>
+</section>
+
+<footer>
+ <div class="footer-newsletter">
+ <div>
+ <span class="nl-icon">✉️</span>
+ <div class="nl-title">Reste dans la boucle</div>
+ <div class="nl-desc">Reçois les nouvelles analyses et alertes cyber directement dans ta boîte mail.</div>
+ </div>
+ <a href="#" class="btn-primary">S'abonner gratuitement</a>
+ </div>
+
+ <div class="footer-grid">
+ <div>
+ <div class="footer-brand-logo">PK INFOSEC</div>
+ <div class="footer-brand-desc">Veille cyber & IA, analyses techniques et sécurité opérationnelle orientée résultats.</div>
+ </div>
+ <div>
+ <div class="footer-col-title">Sections</div>
+ <ul class="footer-links">
+ <li><a href="#">Accueil</a></li>
+ <li><a href="#">Articles</a></li>
+ <li><a href="#">Ressources</a></li>
+ <li><a href="#">Services</a></li>
+ <li><a href="#">À propos</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="footer-col-title">Communauté</div>
+ <ul class="footer-links">
+ <li><a href="#">Twitter / X</a></li>
+ <li><a href="#">GitHub</a></li>
+ <li><a href="#">LinkedIn</a></li>
+ <li><a href="#">Flux RSS</a></li>
+ </ul>
+ </div>
+ <div>
+ <div class="footer-col-title">Newsletter</div>
+ <div style="font-family: var(--font-ui); font-size:13px; color:var(--muted); line-height:1.6; margin-bottom:16px;">Recevez les analyses hebdomadaires et alertes critiques.</div>
+ <a href="#" class="btn-primary" style="font-size:11px; padding:10px 20px;">S'abonner gratuitement</a>
+ </div>
+ </div>
+
+ <div class="footer-bottom">
+ <span>© 2026 PK InfoSec. Tous droits réservés.</span>
+ <span>SYSTEM STATUS: <span style="color:var(--green)">OPERATIONAL</span></span>
+ </div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+ const item = el.closest('.faq-item');
+ const isOpen = item.classList.contains('open');
+ document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+ if (!isOpen) item.classList.add('open');
+}
+
+const observer = new IntersectionObserver((entries) => {
+ entries.forEach((e, i) => {
+ if (e.isIntersecting) {
+ setTimeout(() => e.target.classList.add('visible'), i * 100);
+ observer.unobserve(e.target);
+ }
+ });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+const threatEl = document.getElementById('cnt-threats');
+setInterval(() => {
+ const base = 12 + Math.floor(Math.random() * 6);
+ threatEl.textContent = base;
+}, 4000);
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+ a.addEventListener('click', e => {
+ const target = document.querySelector(a.getAttribute('href'));
+ if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+ });
+});
+
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+ let current = '';
+ sections.forEach(s => {
+ if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+ });
+ document.querySelectorAll('.nav-links a').forEach(a => {
+ a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+ });
+});
+</script>
+</body>
 </html>
