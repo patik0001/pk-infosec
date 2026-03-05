@@ -46,7 +46,7 @@ details summary:focus-visible {
   outline-offset: 2px;
 }
 
-.container { width: min(960px, 92%); margin: 0 auto; }
+.container { width: min(900px, 92%); margin: 0 auto; }
 
 .site-header {
   position: sticky;
@@ -92,10 +92,10 @@ nav a:hover, nav a.active {
 }
 
 .hero {
-  padding: 3.4rem 0 2.1rem;
+  padding: 3.1rem 0 1.9rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .85rem;
+  grid-template-columns: 1fr;
+  gap: .8rem;
   align-items: stretch;
 }
 .cockpit {
@@ -212,7 +212,7 @@ nav a:hover, nav a.active {
 .cards {
   margin-top: .85rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: 1fr;
   gap: .8rem;
 }
 
