@@ -19,6 +19,28 @@ Option 2 (Node):
 npx serve .
 ```
 
+## Backend V1 (Express)
+
+Un backend a été ajouté dans `backend/` avec:
+
+- `POST /api/contact`
+- `POST /api/newsletter`
+- validation/sanitization + rate limit + headers de sécurité
+- stockage minimal local JSON sécurisé
+- emails transactionnels (admin + accusé réception)
+
+### Run backend en local
+
+```bash
+cd backend
+cp .env.example .env
+npm install
+npm test
+npm run dev
+```
+
+Détails: `backend/README.md`
+
 ## Note d’intégration Ghost
 
 Le repo source était vide au moment de l’implémentation.
