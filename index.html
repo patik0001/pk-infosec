@@ -3642,5 +3642,36 @@ if (threatEl) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="./frontend.config.js"></script>
 <script src="./frontend.js"></script>
+
+<script>
+(function(){
+  function revealSection(id){
+    const targets=['apropos','contact'];
+    targets.forEach(t=>{
+      const el=document.getElementById(t);
+      if(!el) return;
+      if(t===id){ el.classList.add('reveal'); }
+    });
+    const target=document.getElementById(id);
+    if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }
+
+  document.querySelectorAll('a[href="#apropos"], a[href="#contact"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      const id=this.getAttribute('href').slice(1);
+      revealSection(id);
+      if(history.replaceState){ history.replaceState(null,'','#'+id); }
+    });
+  });
+
+  // Direct URL support (#apropos / #contact)
+  const hash=(location.hash||'').replace('#','');
+  if(hash==='apropos' || hash==='contact'){
+    revealSection(hash);
+  }
+})();
+</script>
+
 </body>
 </html>
