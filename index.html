@@ -490,6 +490,257 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
   .sec-title{font-size:clamp(20px,6vw,28px)}
   .cta-sec{padding:60px 20px}
 }
+
+/* ── À PROPOS ── */
+.ap-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:start}
+.ap-card{background:var(--panel);border:1px solid var(--border2);padding:32px;position:sticky;top:72px}
+.ap-avatar{width:120px;height:120px;border-radius:0;border:2px solid var(--cyan);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-size:36px;font-weight:900;color:var(--cyan);background:var(--cyan-bg);position:relative}
+.ap-avatar::before{content:'';position:absolute;inset:-6px;border:1px solid rgba(0,229,255,.15)}
+.ap-avatar::after{content:'';position:absolute;bottom:-3px;left:-3px;right:-3px;height:3px;background:linear-gradient(90deg,var(--cyan),transparent)}
+.ap-name{font-family:var(--head);font-size:20px;font-weight:900;color:var(--white);text-align:center;letter-spacing:.06em;margin-bottom:4px}
+.ap-role{font-family:var(--mono);font-size:11px;color:var(--cyan);text-align:center;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
+.ap-certs{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.ap-cert{font-family:var(--mono);font-size:10px;padding:6px 12px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border2);background:var(--cyan-bg)}
+.ap-cert-name{color:var(--white);letter-spacing:.06em}
+.ap-cert-status{font-size:9px;letter-spacing:.08em;padding:2px 7px}
+.ap-cert-status.active{color:var(--green);border:1px solid rgba(0,255,136,.3);background:rgba(0,255,136,.08)}
+.ap-cert-status.progress{color:var(--amber);border:1px solid rgba(255,170,0,.3);background:rgba(255,170,0,.08)}
+.ap-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.ap-stat{text-align:center;background:var(--surface);border:1px solid var(--border);padding:10px 8px}
+.ap-stat-val{font-family:var(--head);font-size:22px;font-weight:900;color:var(--cyan);display:block;line-height:1}
+.ap-stat-lbl{font-family:var(--mono);font-size:9px;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.ap-content h3{font-family:var(--head);font-size:16px;font-weight:700;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.ap-content h3::before{content:'◈';font-size:11px}
+.ap-content p{font-family:var(--ui);font-size:16px;color:rgba(232,244,248,.8);line-height:1.8;margin-bottom:28px}
+.ap-timeline{display:flex;flex-direction:column;gap:0;margin-bottom:32px}
+.ap-tl-item{display:grid;grid-template-columns:90px 1fr;gap:20px;position:relative;padding-bottom:24px}
+.ap-tl-item:not(:last-child)::after{content:'';position:absolute;left:43px;top:28px;bottom:0;width:1px;background:linear-gradient(180deg,var(--border2),transparent)}
+.ap-tl-year{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:.1em;padding-top:4px;text-align:right}
+.ap-tl-dot{position:absolute;left:40px;top:5px;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.ap-tl-body{background:var(--panel);border:1px solid var(--border2);border-left:2px solid var(--cyan);padding:12px 16px}
+.ap-tl-title{font-family:var(--head);font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px}
+.ap-tl-desc{font-family:var(--ui);font-size:14px;color:var(--grey);line-height:1.6}
+.ap-values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
+.ap-value{background:var(--panel);border:1px solid var(--border2);padding:18px 20px;position:relative;overflow:hidden}
+.ap-value::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
+.ap-value-icon{font-size:24px;margin-bottom:8px;display:block}
+.ap-value-title{font-family:var(--head);font-size:12px;font-weight:700;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.ap-value-desc{font-family:var(--ui);font-size:13px;color:var(--grey);line-height:1.6}
+
+/* ── CONTACT ── */
+.contact-sec{background:var(--bg);position:relative;overflow:hidden}
+.contact-sec::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(0,229,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.02) 1px,transparent 1px);background-size:48px 48px}
+.contact-sec::after{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,255,.04) 0%,transparent 65%);pointer-events:none}
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:start;position:relative;z-index:1}
+.contact-form-wrap{background:var(--panel);border:1px solid var(--border2);border-top:3px solid var(--cyan);padding:40px}
+.cf-head{margin-bottom:32px}
+.cf-eyebrow{font-family:var(--mono);font-size:10px;color:var(--cyan);letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.cf-eyebrow::before{content:'◈'}
+.cf-title{font-family:var(--head);font-size:clamp(22px,2.5vw,32px);font-weight:900;color:var(--white);letter-spacing:.02em;margin-bottom:8px}
+.cf-sub{font-family:var(--ui);font-size:15px;color:var(--grey);line-height:1.7}
+.cf-status{display:flex;align-items:center;gap:10px;margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--green);letter-spacing:.1em}
+.cf-status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 1.8s infinite}
+.cf-fields{display:flex;flex-direction:column;gap:14px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf-field{position:relative}
+.cf-label{font-family:var(--mono);font-size:9px;color:var(--cyan-dim);letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:6px}
+.cf-input{width:100%;background:var(--surface);border:1px solid var(--border2);color:var(--white);font-family:var(--ui);font-size:15px;padding:12px 16px;outline:none;transition:border-color .2s,box-shadow .2s;border-radius:0;appearance:none}
+.cf-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,229,255,.08)}
+.cf-input::placeholder{color:var(--grey);font-size:14px}
+.cf-input-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23607080' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer}
+.cf-textarea{resize:vertical;min-height:120px;font-family:var(--ui)}
+.cf-field::after{content:'';position:absolute;bottom:0;left:0;right:100%;height:1px;background:var(--cyan);transition:right .3s}
+.cf-field:focus-within::after{right:0}
+.cf-submit{margin-top:8px;width:100%;font-family:var(--ui);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--cyan);border:none;padding:16px 32px;cursor:pointer;clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);transition:all .25s;position:relative;overflow:hidden}
+.cf-submit:hover{background:white;box-shadow:0 8px 32px rgba(0,229,255,.35)}
+.cf-submit::after{content:'→';margin-left:10px;transition:transform .2s}
+.cf-submit:hover::after{transform:translateX(4px)}
+.cf-note{font-family:var(--mono);font-size:10px;color:var(--grey);margin-top:12px;text-align:center;letter-spacing:.08em}
+.contact-aside{display:flex;flex-direction:column;gap:16px}
+.ca-card{background:var(--panel);border:1px solid var(--border2);padding:24px}
+.ca-card-title{font-family:var(--mono);font-size:10px;color:var(--cyan);letter-spacing:.25em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ca-card-title::before{content:'◈'}
+.ca-item{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border)}
+.ca-item:last-child{border-bottom:none;padding-bottom:0}
+.ca-icon{font-size:18px;flex-shrink:0;line-height:1.3}
+.ca-label{font-family:var(--mono);font-size:9px;color:var(--cyan-dim);letter-spacing:.15em;text-transform:uppercase;margin-bottom:3px}
+.ca-value{font-family:var(--ui);font-size:14px;color:var(--white);line-height:1.5}
+.ca-value a{color:var(--cyan);text-decoration:none}
+.ca-value a:hover{text-decoration:underline}
+.ca-avail{background:var(--panel);border:1px solid var(--border2);padding:20px 24px}
+.ca-avail-title{font-family:var(--mono);font-size:10px;color:var(--cyan);letter-spacing:.25em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ca-avail-title::before{content:'◈'}
+.ca-slot{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:11px}
+.ca-slot:last-child{border-bottom:none}
+.ca-slot-day{color:var(--white);letter-spacing:.06em}
+.ca-slot-time{color:var(--grey)}
+.ca-slot-badge{font-size:9px;padding:2px 8px;letter-spacing:.08em}
+.ca-slot-badge.open{color:var(--green);border:1px solid rgba(0,255,136,.3);background:rgba(0,255,136,.08)}
+.ca-slot-badge.partial{color:var(--amber);border:1px solid rgba(255,170,0,.3);background:rgba(255,170,0,.08)}
+.ca-slot-badge.closed{color:var(--grey);border:1px solid var(--border2)}
+
+@media(max-width:1100px){
+  .ap-grid{grid-template-columns:1fr}
+  .ap-card{position:static}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .cf-row{grid-template-columns:1fr}
+  .contact-form-wrap{padding:24px 20px}
+  .ap-values{grid-template-columns:1fr}
+  .ap-tl-item{grid-template-columns:70px 1fr;gap:12px}
+}
+
+/* ── EXPERTISE TAG TOOLTIPS ── */
+.tag-tip{position:relative;cursor:help}
+.tag-tip::after{
+  content:attr(data-tip);
+  position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%) scale(.92);
+  background:#0a1520;border:1px solid var(--cyan);color:var(--white);
+  font-family:var(--ui);font-size:12px;font-weight:400;line-height:1.55;
+  padding:10px 14px;width:220px;text-align:left;white-space:normal;
+  letter-spacing:0;text-transform:none;
+  pointer-events:none;opacity:0;z-index:200;
+  transition:opacity .18s ease,transform .18s ease;
+  box-shadow:0 8px 32px rgba(0,0,0,.7),0 0 0 1px rgba(0,229,255,.15);
+}
+.tag-tip::before{
+  content:'';position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top:6px solid var(--cyan);
+  pointer-events:none;opacity:0;transition:opacity .18s;z-index:201;
+}
+.tag-tip:hover::after,.tag-tip:hover::before{opacity:1;transform:translateX(-50%) scale(1)}
+.tag-tip:hover::before{opacity:1}
+
+/* ── GLOBAL CONTRAST & LEGIBILITY OVERRIDES ── */
+:root {
+  --white: #eef6fc;
+  --grey: #8caabb;
+  --cyan: #00e8ff;
+  --green: #00f590;
+  --bg: #020507;
+  --surface: #060c11;
+  --panel: #091016;
+}
+
+/* ── BODY: richer background, stronger scan-lines ── */
+body { background: var(--bg); }
+body::before {
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,.12) 2px, rgba(0,0,0,.12) 3px
+  ) !important;
+}
+
+/* ── HERO ── */
+.hero::before {
+  filter: brightness(.14) saturate(1.8) !important;
+}
+.hero::after {
+  background:
+    linear-gradient(90deg, rgba(2,5,7,.94) 0%, rgba(2,5,7,.65) 50%, rgba(2,5,7,.15) 100%),
+    linear-gradient(180deg, rgba(2,5,7,.45) 0%, rgba(2,5,7,0) 35%, rgba(2,5,7,.55) 100%) !important;
+}
+
+.eyebrow {
+  font-size: 13px !important;
+  color: #00e8ff !important;
+  letter-spacing: .28em !important;
+  text-shadow: 0 0 24px rgba(0,232,255,.55), 0 0 60px rgba(0,232,255,.2) !important;
+}
+.hero-h1 {
+  font-size: clamp(34px, 4vw, 58px) !important;
+  text-shadow: 0 2px 40px rgba(0,0,0,.97), 0 0 100px rgba(0,0,0,.85) !important;
+  color: #eef6fc !important;
+}
+.hero-h1 .c {
+  color: #00e8ff !important;
+  text-shadow: 0 0 50px rgba(0,232,255,.65), 0 2px 20px rgba(0,0,0,.9) !important;
+}
+.hero-h1 .d { color: #4a6070 !important; }
+.hero-sub {
+  color: rgba(238,246,252,.85) !important;
+  font-size: 18px !important;
+  line-height: 1.78 !important;
+  text-shadow: 0 1px 10px rgba(0,0,0,.85) !important;
+}
+
+/* ── TAGS ── */
+.tag {
+  color: rgba(0,232,255,.85) !important;
+  border-color: rgba(0,232,255,.22) !important;
+  background: rgba(0,232,255,.06) !important;
+}
+
+/* ── SECTION HEADINGS ── */
+.sec-title {
+  color: #eef6fc !important;
+  text-shadow: 0 0 40px rgba(0,232,255,.12) !important;
+}
+.sec-sub { color: #6a8898 !important; }
+.sec-num { color: #00e8ff !important; text-shadow: 0 0 12px rgba(0,232,255,.35) !important; }
+
+/* ── CARDS ── */
+.offer { background: #0a1319 !important; }
+.art-card { background: #0a1319 !important; }
+.res-card { background: #0a1319 !important; }
+.o-name { color: #eef6fc !important; }
+.o-desc { color: #8caabb !important; }
+.o-tagline { color: #0e7090 !important; }
+.art-title { color: #eef6fc !important; }
+.art-desc { color: #8caabb !important; }
+.res-title { color: #eef6fc !important; }
+.res-desc { color: #8caabb !important; }
+.o-price { color: #2a8098 !important; }
+
+/* ── FAQ ── */
+.fq { color: #eef6fc !important; font-size: 17px !important; }
+.fa { color: rgba(238,246,252,.82) !important; font-size: 16px !important; }
+
+/* ── STEP NUMBERS: glow harder ── */
+.step.active .s-n { text-shadow: 0 0 40px rgba(0,200,230,.5) !important; }
+.s-desc { color: #8caabb !important; }
+
+/* ── COCKPIT ── */
+.cockpit { background: rgba(4,8,13,.97) !important; }
+.rn .v {
+  font-size: 22px !important;
+  text-shadow: 0 0 22px currentColor !important;
+  color: #eef6fc !important;
+}
+.rn .v.c { color: #00e8ff !important; }
+.rn .v.g { color: #00f590 !important; }
+.rn .v.r { color: #ff2244 !important; }
+.rn .v.a { color: #ffaa00 !important; }
+.rn .l { color: #6a8898 !important; }
+.lt { color: rgba(0,232,255,.75) !important; }
+.lm.info { color: #c2d8e6 !important; }
+.c-label { color: #0e7090 !important; }
+
+/* ── AP PROPOS + CONTACT ── */
+.ap-content p { color: rgba(238,246,252,.82) !important; }
+.ap-tl-desc { color: #8caabb !important; }
+.cf-sub { color: #8caabb !important; }
+.ca-value { color: #eef6fc !important; }
+.od-sub { color: #8caabb !important; }
+.od-li { color: rgba(238,246,252,.78) !important; }
+
+/* ── FOOTER ── */
+.f-bdesc, .nl-d { color: rgba(238,246,252,.68) !important; }
+.f-links a { color: rgba(238,246,252,.68) !important; }
+.f-bot { color: rgba(238,246,252,.45) !important; }
+.nl-t { color: #eef6fc !important; }
+
+/* ── TICKER ── */
+.ticker-inner { color: #00e8ff !important; text-shadow: 0 0 12px rgba(0,232,255,.5) !important; }
+.tb-label { color: #eef6fc !important; }
+
+
+/* ── VISIBILITY FALLBACK: ensure content never stays hidden ── */
+@media (prefers-reduced-motion: reduce) {
+  .fu { opacity: 1 !important; transform: none !important; }
+}
+/* Safety net: if page loaded >3s ago, show all content */
 </style>
 </head>
 <body>
@@ -510,7 +761,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nav-cta">Réserver un cadrage 30 min</button>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Réserver un cadrage 30 min</button>
   <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -525,8 +776,8 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
   <a href="#ressources" onclick="closeMobileNav()">Ressources</a>
   <a href="#faq"        onclick="closeMobileNav()">FAQ</a>
   <a href="#apropos"    onclick="closeMobileNav()">À propos</a>
-  <a href="#contact-footer" onclick="closeMobileNav()">Contact</a>
-  <button class="mobile-cta" onclick="closeMobileNav()">Réserver un cadrage 30 min</button>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <button class="mobile-cta" onclick="closeMobileNav();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),300)">Réserver un cadrage 30 min</button>
 </div>
 
 <!-- TICKER -->
@@ -553,13 +804,12 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
 
   <!-- LEFT -->
   <div class="hero-left">
-    <div class="eyebrow">MISSION CONTROL — CYBER RISK OPERATIONS</div>
+    <div class="eyebrow">EXPERT CYBERSÉCURITÉ INDÉPENDANT — PME &amp; ETI</div>
     <h1 class="hero-h1">
-      Réduisez votre<br>
-      <span class="c">exposition cyber</span><br>
-      avec une exécution<br>
-      <span class="d">pilotée comme un</span><br>
-      cockpit de mission.
+      Votre sécurité,<br>
+      <span class="c">pilotée par un expert</span><br>
+      dédié à votre<br>
+      <span class="d">résilience cyber.</span>
     </h1>
     <p class="hero-sub">
       PK InfoSec transforme vos signaux faibles en <strong>décisions actionnables</strong> :
@@ -567,7 +817,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       Un cap clair, des actions traçables, un impact mesurable.
     </p>
     <div class="hero-btns">
-      <a href="#" class="btn-p">Réserver un cadrage 30 min</a>
+      <a href="#contact" class="btn-p">Réserver un cadrage 30 min</a>
       <a href="#services" class="btn-s">Voir les offres</a>
     </div>
     <div class="tags">
@@ -1134,7 +1384,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="res-title">50 contrôles de sécurité essentiels pour PME</div>
       <div class="res-desc">Les 50 contrôles minimaux organisés par domaine (accès, réseau, endpoints, cloud, backup). Cochez, mesurez, priorisez. Compatible NIST CSF et ISO 27001.</div>
       <div class="res-format"><span class="res-tag">PDF</span><span class="res-tag">Excel</span><span class="res-tag">Gratuit</span></div>
-      <a href="#" class="res-dl" onclick="downloadResource(0);return false;">↓ Télécharger</a>
+      <a href="#" class="res-dl" onclick="downloadPDF(0, this);return false;">↓ Télécharger</a>
     </div>
 
     <div class="res-card res-hot">
@@ -1143,7 +1393,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="res-title">Matrice de cartographie des risques EBIOS RM</div>
       <div class="res-desc">Template Excel complet : sources de risque, biens supports, scénarios opérationnels et stratégiques. Structure conforme à la méthode ANSSI EBIOS RM 2018.</div>
       <div class="res-format"><span class="res-tag">Excel</span><span class="res-tag">EBIOS RM</span><span class="res-tag">ANSSI</span></div>
-      <a href="#" class="res-dl" onclick="downloadResource(1);return false;">↓ Télécharger</a>
+      <a href="#" class="res-dl" onclick="downloadPDF(1, this);return false;">↓ Télécharger</a>
     </div>
 
     <div class="res-card">
@@ -1152,7 +1402,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="res-title">KPIs sécurité : 20 indicateurs pour piloter votre posture</div>
       <div class="res-desc">Définition, formule de calcul, seuil cible et fréquence de mesure pour 20 KPIs sécurité opérationnels. Du MTTR au taux de patch des vulnérabilités critiques.</div>
       <div class="res-format"><span class="res-tag">PDF</span><span class="res-tag">Dashboard</span><span class="res-tag">Gratuit</span></div>
-      <a href="#" class="res-dl" onclick="downloadResource(2);return false;">↓ Télécharger</a>
+      <a href="#" class="res-dl" onclick="downloadPDF(2, this);return false;">↓ Télécharger</a>
     </div>
 
     <div class="res-card">
@@ -1161,7 +1411,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="res-title">NIS2 vs ISO 27001 : tableau de correspondance complet</div>
       <div class="res-desc">Mapping article par article entre NIS2 et ISO 27001:2022. Identifiez les synergies, évitez la double conformité et optimisez votre plan de mise en conformité.</div>
       <div class="res-format"><span class="res-tag">PDF</span><span class="res-tag">NIS2</span><span class="res-tag">ISO 27001</span></div>
-      <a href="#" class="res-dl" onclick="downloadResource(3);return false;">↓ Télécharger</a>
+      <a href="#" class="res-dl" onclick="downloadPDF(3, this);return false;">↓ Télécharger</a>
     </div>
 
     <div class="res-card">
@@ -1170,7 +1420,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="res-title">Playbook de réponse aux incidents : ransomware</div>
       <div class="res-desc">Procédure de réponse en 6 phases (Préparation, Identification, Confinement, Éradication, Restauration, Leçons). Adapté aux PME sans SOC interne. Conforme NIST SP 800-61.</div>
       <div class="res-format"><span class="res-tag">PDF</span><span class="res-tag">NIST 800-61</span><span class="res-tag">Gratuit</span></div>
-      <a href="#" class="res-dl" onclick="downloadResource(4);return false;">↓ Télécharger</a>
+      <a href="#" class="res-dl" onclick="downloadPDF(4, this);return false;">↓ Télécharger</a>
     </div>
 
     <div class="res-card">
@@ -1179,7 +1429,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="res-title">PSSI allégée : Politique de Sécurité SI pour TPE/PME</div>
       <div class="res-desc">Modèle de PSSI de 12 pages couvrant les 8 domaines fondamentaux. Rédigé en langage non-juridique, personnalisable en 2h. Base solide pour ISO 27001 ou audit assurance.</div>
       <div class="res-format"><span class="res-tag">Word</span><span class="res-tag">PSSI</span><span class="res-tag">ISO 27001</span></div>
-      <a href="#" class="res-dl" onclick="downloadResource(5);return false;">↓ Télécharger</a>
+      <a href="#" class="res-dl" onclick="downloadPDF(5, this);return false;">↓ Télécharger</a>
     </div>
 
   </div>
@@ -1196,11 +1446,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
         <div class="rn-stat"><span class="rn-val">hebdo</span><span class="rn-lbl">Fréquence</span></div>
         <div class="rn-stat"><span class="rn-val">0€</span><span class="rn-lbl">Coût</span></div>
       </div>
-      <form data-newsletter-form data-source="resources_section" style="display:flex;flex-direction:column;gap:8px;min-width:280px">
-        <input name="email" type="email" required placeholder="Votre email pro" style="padding:10px;border:1px solid var(--border2);background:var(--panel);color:var(--white)" />
-        <button type="submit" class="btn-p">S'abonner gratuitement →</button>
-        <small data-form-status style="font-family:var(--mono)" aria-live="polite"></small>
-      </form>
+      <a href="#" class="btn-p">S'abonner gratuitement →</a>
     </div>
   </div>
 </section>
@@ -1227,7 +1473,311 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
     </div>
     <div class="fi">
       <div class="fq" onclick="toggleFaq(this)">Quels référentiels maîtrisez-vous ?<span class="fi-ico">+</span></div>
-      <div class="fa">NIS2, ISO 27001 (certification LA/LI en cours), DORA, RGPD, EBIOS RM, SOC2. Certifications actives : CEH, CCNA, CCNP. CISSP en préparation (juillet 2026). CCIE prévu 2027.</div>
+      <div class="fa">NIS2, ISO 27001 LA/LI (PECB), DORA, RGPD, EBIOS RM, SOC2. Certifications : CEH, CCNA/CCNP, CompTIA Sec+, ITIL 4, PMP. Formation : Master Ingénieur Cybersécurité — UTT. CISSP en préparation (juil. 2026). CCIE Security prévu 2027.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- À PROPOS -->
+<section class="sec" id="apropos">
+  <div class="sec-head fu">
+    <span class="sec-num">// 06</span>
+    <h2 class="sec-title">À propos</h2>
+    <div class="sec-line"></div>
+    <span class="sec-sub">Qui est derrière PK InfoSec</span>
+  </div>
+
+  <div class="ap-grid fu">
+
+    <!-- CARTE PROFIL -->
+    <div class="ap-card">
+      <div class="ap-avatar">PK</div>
+      <div class="ap-name">Patik K.</div>
+      <div class="ap-role">Cyber Risk Expert · RSSI Freelance</div>
+
+      <div style="font-family:var(--mono);font-size:9px;color:var(--cyan-dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;padding:0 2px">◈ Formation</div>
+      <div class="ap-certs" style="margin-bottom:12px">
+        <div class="ap-cert" style="border-left:2px solid var(--cyan)">
+          <span class="ap-cert-name">Master Ing. Cybersécurité — UTT</span>
+          <span class="ap-cert-status active">✓ DIPLÔMÉ</span>
+        </div>
+      </div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--cyan-dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;padding:0 2px">◈ Certifications actives</div>
+      <div class="ap-certs" style="margin-bottom:12px">
+        <div class="ap-cert">
+          <span class="ap-cert-name">CEH — Certified Ethical Hacker</span>
+          <span class="ap-cert-status active">✓ ACTIF</span>
+        </div>
+        <div class="ap-cert">
+          <span class="ap-cert-name">CCNA / CCNP — Cisco</span>
+          <span class="ap-cert-status active">✓ ACTIF</span>
+        </div>
+        <div class="ap-cert">
+          <span class="ap-cert-name">ISO 27001 LA/LI — PECB</span>
+          <span class="ap-cert-status active">✓ ACTIF</span>
+        </div>
+        <div class="ap-cert">
+          <span class="ap-cert-name">CompTIA Security+</span>
+          <span class="ap-cert-status active">✓ ACTIF</span>
+        </div>
+        <div class="ap-cert">
+          <span class="ap-cert-name">ITIL 4 Foundation</span>
+          <span class="ap-cert-status active">✓ ACTIF</span>
+        </div>
+        <div class="ap-cert">
+          <span class="ap-cert-name">PMP — Project Mgmt Prof.</span>
+          <span class="ap-cert-status active">✓ ACTIF</span>
+        </div>
+      </div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--cyan-dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;padding:0 2px">◈ En cours</div>
+      <div class="ap-certs">
+        <div class="ap-cert">
+          <span class="ap-cert-name">CISSP (ISC²)</span>
+          <span class="ap-cert-status progress">⟳ Juil. 2026</span>
+        </div>
+        <div class="ap-cert">
+          <span class="ap-cert-name">CCIE Security</span>
+          <span class="ap-cert-status progress">⟳ 2027</span>
+        </div>
+      </div>
+
+      <div class="ap-stat-row">
+        <div class="ap-stat">
+          <span class="ap-stat-val">5+</span>
+          <div class="ap-stat-lbl">Ans Cyber</div>
+        </div>
+        <div class="ap-stat">
+          <span class="ap-stat-val">20+</span>
+          <div class="ap-stat-lbl">Missions</div>
+        </div>
+        <div class="ap-stat">
+          <span class="ap-stat-val">8</span>
+          <div class="ap-stat-lbl">Référentiels</div>
+        </div>
+        <div class="ap-stat">
+          <span class="ap-stat-val">48h</span>
+          <div class="ap-stat-lbl">Délai livrable</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="ap-content">
+
+      <h3>La mission</h3>
+      <p>PK InfoSec est né d'une conviction simple : la cybersécurité ne devrait pas être réservée aux grandes entreprises. Les PME et ETI représentent 60% des cibles d'attaques en France, mais n'ont ni le budget ni l'accès aux profils qui leur permettraient de se défendre efficacement. Je comble cet écart — avec l'exigence du RSSI de grand groupe, à l'échelle et au prix adapté à votre structure.</p>
+
+      <h3>Parcours</h3>
+      <div class="ap-timeline">
+        <div class="ap-tl-item">
+          <div class="ap-tl-year">2026</div>
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-body">
+            <div class="ap-tl-title">Lancement PK InfoSec — RSSI as a Service</div>
+            <div class="ap-tl-desc">Création de la plateforme de conseil cyber indépendant. Accompagnement PME/ETI sur NIS2, ISO 27001, DORA. Veille cyber active via blog et newsletter.</div>
+          </div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-year">2024–25</div>
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-body">
+            <div class="ap-tl-title">Certifications avancées & spécialisation GRC</div>
+            <div class="ap-tl-desc">ISO 27001 Lead Auditor/Implementer. Approfondissement EBIOS RM, DORA, NIS2. Préparation CISSP en cours. Missions de conformité pour secteurs financier et industriel.</div>
+          </div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-year">2022–24</div>
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-body">
+            <div class="ap-tl-title">Expert Sécurité Réseau — CEH & CCNP</div>
+            <div class="ap-tl-desc">Certification CEH et CCNP. Missions de pentest, architecture Zero Trust, segmentation réseau. Spécialisation Active Directory et infrastructures critiques.</div>
+          </div>
+        </div>
+        <div class="ap-tl-item">
+          <div class="ap-tl-year">2020–22</div>
+          <div class="ap-tl-dot"></div>
+          <div class="ap-tl-body">
+            <div class="ap-tl-title">Ingénieur Réseau & Sécurité — CCNA</div>
+            <div class="ap-tl-desc">Premiers pas dans la sécurité offensive et défensive. Certification CCNA. Construction du lab personnel : Kali, Metasploitable, Active Directory de test.</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Valeurs & approche</h3>
+      <div class="ap-values">
+        <div class="ap-value">
+          <span class="ap-value-icon">🎯</span>
+          <div class="ap-value-title">Résultats concrets</div>
+          <div class="ap-value-desc">Pas de rapport de 80 pages non actionnable. Chaque livrable est orienté décision : que faites-vous dans les 72h qui suivent ?</div>
+        </div>
+        <div class="ap-value">
+          <span class="ap-value-icon">🔍</span>
+          <div class="ap-value-title">Transparence totale</div>
+          <div class="ap-value-desc">Le niveau de risque réel, pas celui qui rassure. Vous méritez une évaluation honnête, même quand elle est inconfortable.</div>
+        </div>
+        <div class="ap-value">
+          <span class="ap-value-icon">⚡</span>
+          <div class="ap-value-title">Vélocité opérationnelle</div>
+          <div class="ap-value-desc">Livrables en 48-72h. Pas de cycle de validation interminable. La menace n'attend pas votre prochain CODIR.</div>
+        </div>
+        <div class="ap-value">
+          <span class="ap-value-icon">🧠</span>
+          <div class="ap-value-title">Vulgarisation sans condescendance</div>
+          <div class="ap-value-desc">Technique pour les experts, business pour la direction. Le même message, deux niveaux de lecture. Toujours.</div>
+        </div>
+      </div>
+
+      <h3>Domaines d'expertise</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span class="tag tag-tip" data-tip="Directive UE 2022/2555, obligatoire depuis oct. 2024. Secteurs essentiels & importants. Sanctions jusqu&#39;à 10M€ ou 2% CA.">NIS2</span><span class="tag tag-tip" data-tip="Norme internationale SMSI. Référentiel de certification reconnu mondialement. Audit, contrôles Annexe A, amélioration continue.">ISO 27001</span><span class="tag tag-tip" data-tip="Digital Operational Resilience Act. Résilience numérique du secteur financier UE. En vigueur jan. 2025. Tests ICT obligatoires.">DORA</span>
+        <span class="tag tag-tip" data-tip="Méthode ANSSI d&#39;analyse de risques. 5 ateliers structurés : valeurs métier, sources de risque, scénarios opérationnels & stratégiques.">EBIOS RM</span><span class="tag tag-tip" data-tip="Mesures techniques de sécurité imposées par le RGPD. Chiffrement, disponibilité, résilience, PRA. Notification CNIL sous 72h.">RGPD / Art.32</span><span class="tag tag-tip" data-tip="Architecture « ne jamais faire confiance, toujours vérifier ». Micro-segmentation, MFA strict, accès granulaires par identité.">Zero Trust</span>
+        <span class="tag tag-tip" data-tip="Annuaire Microsoft central de tout SI Windows. Cible n°1 des ransomwares. Délégations, GPO, Tier Model, BloodHound.">Active Directory</span><span class="tag tag-tip" data-tip="Framework de tactiques et techniques d&#39;attaquants réels. Base pour la détection SOC, le red team et la threat intelligence.">MITRE ATT&CK</span><span class="tag tag-tip" data-tip="Security Operations Center. Détection et réponse aux incidents. SIEM : corrélation d&#39;événements (Wazuh, Splunk, Sentinel).">SOC / SIEM</span>
+        <span class="tag tag-tip" data-tip="Test d&#39;intrusion simulant une attaque réelle. Black/Grey/White box. Livrable : rapport vulnérabilités + plan de remédiation.">Pentest</span><span class="tag tag-tip" data-tip="Identity Services Engine. NAC (Network Access Control) pour l&#39;authentification réseau 802.1X par profil d&#39;identité.">Cisco ISE</span><span class="tag tag-tip" data-tip="Sécurité des infrastructures AWS. IAM, Security Hub, GuardDuty, Config, CloudTrail, VPC security groups.">Cloud AWS</span>
+        <span class="tag tag-tip" data-tip="RSSI externalisé à temps partagé. Gouvernance, politique de sécurité, reporting direction — sans recrutement CDI.">RSSI as a Service</span><span class="tag tag-tip" data-tip="Procédures IR (NIST SP 800-61). Cellule de crise, plan de communication, continuité d&#39;activité, retour d&#39;expérience.">Gestion de crise</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="sec contact-sec" id="contact">
+  <div class="sec-head fu">
+    <span class="sec-num">// 07</span>
+    <h2 class="sec-title">Contact</h2>
+    <div class="sec-line"></div>
+    <span class="sec-sub">Cadrage 30 min • Sans engagement</span>
+  </div>
+
+  <div class="contact-grid fu">
+
+    <!-- FORMULAIRE -->
+    <div class="contact-form-wrap">
+      <div class="cf-head">
+        <div class="cf-eyebrow">Ouvrir une mission</div>
+        <h3 class="cf-title">Parlons de votre exposition cyber</h3>
+        <p class="cf-sub">Réponse garantie sous 24h ouvrées. Ce formulaire envoie votre demande directement à l'équipe PK InfoSec.</p>
+        <div class="cf-status">
+          <span class="cf-status-dot"></span>
+          DISPONIBLE POUR DE NOUVELLES MISSIONS — Q2 2026
+        </div>
+      </div>
+
+      <div class="cf-fields">
+        <div class="cf-row">
+          <div class="cf-field">
+            <label class="cf-label" for="cf-nom">Nom & Prénom</label>
+            <input type="text" id="cf-nom" class="cf-input" placeholder="Jean Dupont">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-email">Email professionnel</label>
+            <input type="email" id="cf-email" class="cf-input" placeholder="j.dupont@entreprise.fr">
+          </div>
+        </div>
+        <div class="cf-row">
+          <div class="cf-field">
+            <label class="cf-label" for="cf-company">Entreprise</label>
+            <input type="text" id="cf-company" class="cf-input" placeholder="Nom de l'entreprise">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label" for="cf-size">Taille de l'entreprise</label>
+            <select id="cf-size" class="cf-input cf-input-select" style="color:var(--grey)">
+              <option value="" disabled selected style="color:var(--grey)">Sélectionner...</option>
+              <option value="tpe" style="background:var(--panel)">TPE — &lt; 10 salariés</option>
+              <option value="pme" style="background:var(--panel)">PME — 10 à 250 salariés</option>
+              <option value="eti" style="background:var(--panel)">ETI — 250 à 5 000 salariés</option>
+              <option value="ge" style="background:var(--panel)">Grande entreprise — +5 000</option>
+            </select>
+          </div>
+        </div>
+        <div class="cf-field">
+          <label class="cf-label" for="cf-service">Besoin identifié</label>
+          <select id="cf-service" class="cf-input cf-input-select" style="color:var(--grey)">
+            <option value="" disabled selected style="background:var(--panel)">Quel service vous intéresse ?</option>
+            <option value="audit" style="background:var(--panel)">Audit Flash 30 min — Diagnostic rapide</option>
+            <option value="conformite" style="background:var(--panel)">Diagnostic Conformité NIS2/ISO 27001/DORA</option>
+            <option value="rssi" style="background:var(--panel)">RSSI as a Service — Pilotage continu</option>
+            <option value="autre" style="background:var(--panel)">Autre / Je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="cf-field">
+          <label class="cf-label" for="cf-message">Contexte & problématique</label>
+          <textarea id="cf-message" class="cf-input cf-textarea" placeholder="Décrivez votre situation en quelques lignes : secteur, taille, contexte réglementaire, incident récent, projet en cours... Toute information utile pour préparer notre échange."></textarea>
+        </div>
+        <button class="cf-submit" onclick="handleContactSubmit()">Envoyer la demande</button>
+        <p class="cf-note">🔒 Vos données ne sont jamais partagées ni revendues. Confidentialité garantie.</p>
+      </div>
+    </div>
+
+    <!-- ASIDE INFO -->
+    <div class="contact-aside">
+
+      <div class="ca-card">
+        <div class="ca-card-title">Coordonnées</div>
+        <div class="ca-item">
+          <span class="ca-icon">📧</span>
+          <div>
+            <div class="ca-label">Email</div>
+            <div class="ca-value"><a href="/cdn-cgi/l/email-protection#1a7975746e7b796e5a6a713773747c75697f7934797577"><span class="__cf_email__" data-cfemail="f695999882979582b6869ddb9f989099859395d895999b">[email&#160;protected]</span></a></div>
+          </div>
+        </div>
+        <div class="ca-item">
+          <span class="ca-icon">💼</span>
+          <div>
+            <div class="ca-label">LinkedIn</div>
+            <div class="ca-value"><a href="#" target="_blank">linkedin.com/in/pk-infosec</a></div>
+          </div>
+        </div>
+        <div class="ca-item">
+          <span class="ca-icon">📍</span>
+          <div>
+            <div class="ca-label">Zone d'intervention</div>
+            <div class="ca-value">France entière • Remote & Présentiel<br>Île-de-France prioritaire</div>
+          </div>
+        </div>
+        <div class="ca-item">
+          <span class="ca-icon">⚡</span>
+          <div>
+            <div class="ca-label">Délai de réponse</div>
+            <div class="ca-value">Sous 24h ouvrées garanties</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ca-avail">
+        <div class="ca-avail-title">Disponibilités — Q2 2026</div>
+        <div class="ca-slot">
+          <span class="ca-slot-day">Lundi – Mercredi</span>
+          <span class="ca-slot-time">9h – 18h</span>
+          <span class="ca-slot-badge open">DISPO</span>
+        </div>
+        <div class="ca-slot">
+          <span class="ca-slot-day">Jeudi</span>
+          <span class="ca-slot-time">9h – 14h</span>
+          <span class="ca-slot-badge partial">PARTIEL</span>
+        </div>
+        <div class="ca-slot">
+          <span class="ca-slot-day">Vendredi</span>
+          <span class="ca-slot-time">Sur RDV</span>
+          <span class="ca-slot-badge open">DISPO</span>
+        </div>
+        <div class="ca-slot">
+          <span class="ca-slot-day">Week-end</span>
+          <span class="ca-slot-time">—</span>
+          <span class="ca-slot-badge closed">FERMÉ</span>
+        </div>
+      </div>
+
+      <div class="ca-card" style="background:var(--cyan-bg);border-color:rgba(0,229,255,.2);border-left:3px solid var(--cyan)">
+        <div class="ca-card-title">Le cadrage 30 min c'est quoi ?</div>
+        <div style="font-family:var(--ui);font-size:14px;color:rgba(232,244,248,.8);line-height:1.7">
+          Un appel structuré pour <strong style="color:var(--white)">évaluer votre exposition</strong> et identifier vos 3 priorités immédiates. Vous repartez avec un plan d'action concret, même si nous ne travaillons pas ensemble.
+          <div style="margin-top:12px;font-family:var(--mono);font-size:10px;color:var(--cyan);letter-spacing:.1em">✓ SANS ENGAGEMENT &nbsp;•&nbsp; ✓ 100% GRATUIT</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1240,36 +1790,12 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
   </h2>
   <p class="cta-d">Aucun engagement. Un échange structuré pour évaluer votre exposition et identifier vos priorités immédiates.</p>
   <div class="cta-btns">
-    <a href="#" class="btn-p">Réserver un cadrage 30 min</a>
+    <a href="#contact" class="btn-p">Réserver un cadrage 30 min</a>
     <a href="#services" class="btn-s">Voir les offres</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-
-
-<section id="contact" class="contact-sec" style="padding:80px 28px;background:var(--surface);border-top:1px solid var(--border2);">
-  <div style="max-width:980px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;">
-    <div>
-      <div class="section-label">// Contact</div>
-      <h2 class="section-title" style="margin:8px 0 10px;">Parlons de votre besoin cyber</h2>
-      <p style="color:var(--muted);max-width:56ch;">Réponse sous 24h ouvrées. Ce formulaire envoie votre demande à l'équipe PK InfoSec.</p>
-      <form data-contact-form style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
-        <input name="name" placeholder="Nom" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);">
-        <input name="email" type="email" placeholder="Email" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);">
-        <input name="subject" placeholder="Sujet" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);">
-        <textarea name="message" placeholder="Message" rows="5" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);"></textarea>
-        <button class="btn-p" type="submit" style="width:max-content;">Envoyer la demande</button>
-      </form>
-      <p data-contact-status style="margin-top:10px;color:var(--muted);font-family:var(--mono);font-size:12px;"></p>
-    </div>
-    <div style="background:var(--panel);border:1px solid var(--border2);padding:20px;">
-      <div class="section-label">Infos</div>
-      <p style="margin-top:10px;color:var(--muted);">Audit flash 30 min, diagnostic conformité, RSSI as a Service.</p>
-      <p style="margin-top:14px;"><strong>Email</strong><br><a href="mailto:contact@pk-infosec.com">contact@pk-infosec.com</a></p>
-    </div>
-  </div>
-</section>
 <footer id="contact-footer">
   <div class="f-nl">
     <div>
@@ -1277,11 +1803,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
       <div class="nl-t">Reste dans la boucle</div>
       <div class="nl-d" style="font-size:16px;color:rgba(232,244,248,.75)">Reçois les nouvelles analyses et alertes cyber directement dans ta boîte mail.</div>
     </div>
-    <form data-newsletter-form data-source="footer_cta" style="display:flex;flex-direction:column;gap:8px;min-width:280px">
-      <input name="email" type="email" required placeholder="email@entreprise.com" style="padding:10px;border:1px solid var(--border2);background:var(--panel);color:var(--white)" />
-      <button type="submit" class="btn-p">S'abonner gratuitement</button>
-      <small data-form-status style="font-family:var(--mono)" aria-live="polite"></small>
-    </form>
+    <a href="#" class="btn-p">S'abonner gratuitement</a>
   </div>
   <div class="f-grid">
     <div>
@@ -1315,7 +1837,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
   </div>
   <div class="f-bot">
     <span>© 2026 PK InfoSec. Tous droits réservés.</span>
-    <span>SYSTEM STATUS : <span class="online">OPERATIONAL</span></span>
+    <span>STATUT : <span class="online">OPÉRATIONNEL</span></span>
   </div>
 </footer>
 
@@ -1341,9 +1863,13 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
   </div>
 </div>
 
-<script src="frontend.config.js"></script>
-<script src="frontend.js"></script>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+// Fallback: if observer doesn't trigger, show all .fu after 2.5s
+setTimeout(() => {
+  document.querySelectorAll('.fu:not(.vis)').forEach(el => el.classList.add('vis'));
+}, 2500);
+
+</script><script>
 
 function toggleFaq(el){
   const item=el.closest('.fi');
@@ -1864,6 +2390,7 @@ document.addEventListener('keydown', e => { if(e.key==='Escape'){ closeArticle()
 // ── RESOURCE DOWNLOADS ──
 const RESOURCES = [
   {
+    badge: 'CHECKLIST',
     name: '50-controles-securite-PME.txt',
     title: '50 Contrôles de Sécurité Essentiels pour PME',
     content: `PK INFOSEC — 50 CONTRÔLES DE SÉCURITÉ ESSENTIELS POUR PME
@@ -1937,6 +2464,7 @@ Pour aller plus loin : réservez un Audit Flash PME sur pk-infosec.com
 Score de maturité, top risques, plan 30 jours — à partir de 490€`
   },
   {
+    badge: 'TEMPLATE ANSSI',
     name: 'matrice-ebios-rm-template.txt',
     title: 'Matrice de Cartographie des Risques EBIOS RM',
     content: `PK INFOSEC — TEMPLATE EBIOS RM 2018 (ANSSI)
@@ -2029,6 +2557,7 @@ Ce template est fourni à titre indicatif.
 Pour un accompagnement EBIOS RM complet : pk-infosec.com`
   },
   {
+    badge: 'GUIDE KPI',
     name: 'kpis-securite-20-indicateurs.txt',
     title: 'KPIs Sécurité : 20 Indicateurs pour Piloter Votre Posture',
     content: `PK INFOSEC — 20 KPIs SÉCURITÉ OPÉRATIONNELS
@@ -2152,6 +2681,7 @@ Template fourni par PK InfoSec | pk-infosec.com
 Pour un accompagnement sur mesure : contact@pk-infosec.com`
   },
   {
+    badge: 'SYNTHÈSE',
     name: 'nis2-vs-iso27001-mapping.txt',
     title: 'NIS2 vs ISO 27001 — Tableau de Correspondance',
     content: `PK INFOSEC — NIS2 vs ISO 27001:2022 MAPPING COMPLET
@@ -2228,6 +2758,7 @@ Document fourni par PK InfoSec | pk-infosec.com
 Ce document est informatif et ne constitue pas un conseil juridique.`
   },
   {
+    badge: 'PLAYBOOK',
     name: 'playbook-reponse-ransomware.txt',
     title: 'Playbook Réponse aux Incidents — Ransomware',
     content: `PK INFOSEC — PLAYBOOK RÉPONSE INCIDENTS : RANSOMWARE
@@ -2322,6 +2853,7 @@ avocat et votre assureur avant toute décision.
 Document fourni par PK InfoSec | pk-infosec.com`
   },
   {
+    badge: 'TEMPLATE PSSI',
     name: 'pssi-template-pme.txt',
     title: 'PSSI Allégée — Politique de Sécurité SI pour TPE/PME',
     content: `PK INFOSEC — POLITIQUE DE SÉCURITÉ DES SYSTÈMES D'INFORMATION
@@ -2444,13 +2976,175 @@ Pour personnalisation et accompagnement : contact@pk-infosec.com`
 
 function downloadResource(idx) {
   const r = RESOURCES[idx];
-  const blob = new Blob([r.content], { type: 'text/plain;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = r.name;
-  a.click();
-  URL.revokeObjectURL(url);
+  if(!window.jspdf){alert('Chargement du générateur PDF en cours, veuillez réessayer dans quelques secondes.');return;}
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+  const W = 210, H = 297;
+  const marginL = 16, marginR = 16, marginT = 24;
+  const textW = W - marginL - marginR;
+
+  // ── Background ──
+  doc.setFillColor(4, 6, 8);
+  doc.rect(0, 0, W, H, 'F');
+
+  // ── Dot grid pattern ──
+  doc.setDrawColor(0, 229, 255, 0.04);
+  for (let x = 0; x <= W; x += 8) for (let y = 0; y <= H; y += 8) {
+    doc.setFillColor(26, 48, 72);
+    doc.circle(x, y, 0.3, 'F');
+  }
+
+  // ── Top accent bar ──
+  doc.setFillColor(0, 229, 255);
+  doc.rect(0, 0, W, 1.5, 'F');
+
+  // ── Left accent stripe ──
+  doc.setFillColor(0, 229, 255, 0.6);
+  doc.rect(0, 0, 3, H, 'F');
+
+  // ── Logo block ──
+  doc.setFillColor(7, 12, 16);
+  doc.rect(marginL, 8, 60, 12, 'F');
+  doc.setDrawColor(26, 48, 72);
+  doc.setLineWidth(0.3);
+  doc.rect(marginL, 8, 60, 12);
+  // Cyan dot
+  doc.setFillColor(0, 229, 255);
+  doc.circle(marginL + 5, 14, 2, 'F');
+  doc.setFont('courier', 'bold');
+  doc.setFontSize(9);
+  doc.setTextColor(0, 229, 255);
+  doc.text('PK INFOSEC', marginL + 10, 15.5);
+
+  // ── Document type badge ──
+  const badge = r.badge || 'RESSOURCE';
+  doc.setFillColor(0, 229, 255, 0.08);
+  doc.setDrawColor(26, 48, 72);
+  doc.rect(W - 55, 8, 43, 12);
+  doc.setFont('courier', 'normal');
+  doc.setFontSize(7);
+  doc.setTextColor(10, 96, 128);
+  doc.text(badge, W - 55 + 22, 15, { align: 'center' });
+
+  // ── Title block ──
+  doc.setFillColor(10, 17, 24);
+  doc.rect(marginL, 24, textW, 24, 'F');
+  doc.setDrawColor(26, 48, 72);
+  doc.setLineWidth(0.3);
+  doc.rect(marginL, 24, textW, 24);
+  // left cyan border
+  doc.setFillColor(0, 229, 255);
+  doc.rect(marginL, 24, 2, 24, 'F');
+
+  doc.setFont('courier', 'bold');
+  doc.setFontSize(14);
+  doc.setTextColor(232, 244, 248);
+  const titleLines = doc.splitTextToSize(r.title, textW - 12);
+  doc.text(titleLines, marginL + 8, 33);
+
+  doc.setFont('courier', 'normal');
+  doc.setFontSize(8);
+  doc.setTextColor(96, 112, 128);
+  doc.text('PK INFOSEC — pk-infosec.com — Version 2026', marginL + 8, 44);
+
+  // ── Content ──
+  let curY = 56;
+  const lines = r.content.split('\n');
+  const pageBottom = H - 20;
+
+  for (let i = 0; i < lines.length; i++) {
+    if (curY > pageBottom) {
+      doc.addPage();
+      // BG
+      doc.setFillColor(4, 6, 8);
+      doc.rect(0, 0, W, H, 'F');
+      // dot grid
+      for (let x = 0; x <= W; x += 8) for (let y = 0; y <= H; y += 8) {
+        doc.setFillColor(26, 48, 72);
+        doc.circle(x, y, 0.3, 'F');
+      }
+      // top bar
+      doc.setFillColor(0, 229, 255);
+      doc.rect(0, 0, W, 1.5, 'F');
+      // left stripe
+      doc.setFillColor(0, 229, 255, 0.4);
+      doc.rect(0, 0, 3, H, 'F');
+      curY = 14;
+    }
+
+    const raw = lines[i];
+    const trimmed = raw.trimStart();
+
+    // Section headers (ALL CAPS or ---/===)
+    if (/^[A-ZÀ-Ÿ\s\d—–\-]{8,}$/.test(trimmed) && trimmed.length > 5 && !trimmed.startsWith('□') && !trimmed.startsWith('//')) {
+      doc.setFillColor(7, 12, 16);
+      doc.rect(marginL, curY - 4, textW, 8, 'F');
+      doc.setFillColor(0, 229, 255);
+      doc.rect(marginL, curY - 4, 2, 8, 'F');
+      doc.setFont('courier', 'bold');
+      doc.setFontSize(8.5);
+      doc.setTextColor(0, 229, 255);
+      doc.text(trimmed, marginL + 6, curY + 1);
+      curY += 8;
+    } else if (trimmed.startsWith('□')) {
+      // Checklist item
+      doc.setFillColor(0, 229, 255, 0.05);
+      doc.rect(marginL, curY - 3, textW, 6, 'F');
+      doc.setDrawColor(26, 48, 72);
+      doc.setLineWidth(0.2);
+      doc.rect(marginL, curY - 3, textW, 6);
+      // Checkbox
+      doc.setDrawColor(0, 229, 255, 0.4);
+      doc.setLineWidth(0.4);
+      doc.rect(marginL + 3, curY - 2, 4, 4);
+      doc.setFont('courier', 'normal');
+      doc.setFontSize(7.5);
+      doc.setTextColor(200, 220, 230);
+      const itemText = doc.splitTextToSize(trimmed.replace('□ ', ''), textW - 14);
+      doc.text(itemText, marginL + 10, curY + 1);
+      curY += Math.max(6, itemText.length * 4.5);
+    } else if (trimmed.startsWith('---') || trimmed.startsWith('===') || trimmed === '') {
+      if (trimmed.startsWith('---') || trimmed.startsWith('===')) {
+        doc.setDrawColor(26, 48, 72);
+        doc.setLineWidth(0.3);
+        doc.line(marginL, curY, W - marginR, curY);
+      }
+      curY += 3;
+    } else {
+      // Normal text
+      doc.setFont('courier', 'normal');
+      const isSub = trimmed.startsWith('•') || trimmed.startsWith('-') || trimmed.match(/^\d+\./);
+      doc.setFontSize(isSub ? 7.5 : 8);
+      doc.setTextColor(isSub ? [150, 170, 185] : [200, 220, 230]);
+      const wrapped = doc.splitTextToSize(trimmed, textW - (isSub ? 6 : 0));
+      const indent = isSub ? marginL + 6 : marginL;
+      doc.text(wrapped, indent, curY);
+      curY += wrapped.length * 4.5 + 1;
+    }
+  }
+
+  // ── Footer on last page ──
+  const totalPages = doc.getNumberOfPages();
+  for (let p = 1; p <= totalPages; p++) {
+    doc.setPage(p);
+    // Footer bar
+    doc.setFillColor(7, 12, 16);
+    doc.rect(0, H - 14, W, 14, 'F');
+    doc.setDrawColor(26, 48, 72);
+    doc.setLineWidth(0.3);
+    doc.line(0, H - 14, W, H - 14);
+    // Footer text
+    doc.setFont('courier', 'normal');
+    doc.setFontSize(7);
+    doc.setTextColor(96, 112, 128);
+    doc.text('PK INFOSEC — Cyber Risk Operations', marginL, H - 7);
+    doc.text(`contact@pk-infosec.com  |  pk-infosec.com`, W / 2, H - 7, { align: 'center' });
+    doc.setTextColor(0, 229, 255, 0.6);
+    doc.text(`${p} / ${totalPages}`, W - marginR, H - 7, { align: 'right' });
+  }
+
+  const filename = r.name.replace('.txt', '.pdf');
+  doc.save(filename);
 }
 
 // ── HAMBURGER MOBILE NAV ──
@@ -2806,6 +3500,141 @@ ${[['Slide 1 — État de la menace','1 carte visuelle, 3 chiffres clés (incide
   }
 );
 
+
+
+// ── PDF DOWNLOAD WRAPPER ──
+function downloadPDF(idx, btn) {
+  const orig = btn.innerHTML;
+  btn.innerHTML = '⟳ Génération...';
+  btn.style.opacity = '0.7';
+  btn.style.pointerEvents = 'none';
+  setTimeout(() => {
+    try {
+      downloadResource(idx);
+    } catch(e) {
+      console.error('PDF error:', e);
+    }
+    setTimeout(() => {
+      btn.innerHTML = '✓ Téléchargé';
+      btn.style.color = 'var(--green)';
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+        btn.style.color = '';
+      }, 2000);
+    }, 800);
+  }, 50);
+}
+
+// ── CONTACT FORM ──
+function handleContactSubmit() {
+  const nom = document.getElementById('cf-nom').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg = document.getElementById('cf-message').value.trim();
+  if (!nom || !email || !msg) {
+    alert('Merci de remplir au minimum : Nom, Email et Contexte.');
+    return;
+  }
+  const btn = document.querySelector('.cf-submit');
+  btn.textContent = '✓ Demande envoyée — Réponse sous 24h';
+  btn.style.background = 'var(--green)';
+  btn.style.clipPath = 'none';
+  btn.disabled = true;
+}
+
+
+(function() {
+// ── HERO MINI-TERMINAL typewriter ──
+const CMDS = [
+  { cmd: 'nmap -sV --open 192.168.1.0/24', out: [
+    '<span class="k">Host:</span> <span class="v">192.168.1.42</span> <span class="k">Port:</span> <span class="va">445/tcp OPEN</span>',
+    '<span class="k">CVE-2024-1337</span> <span class="vr">CRITICAL 9.8</span> — SMB RCE détecté',
+    '<span class="k">Action:</span> <span class="v">Patch immédiat requis</span>'
+  ]},
+  { cmd: 'ebios-rm --scenario ransomware', out: [
+    '<span class="k">Source:</span> <span class="va">Cybercriminel (LV3)</span>',
+    '<span class="k">Vraisemblance:</span> <span class="vr">ÉLEVÉE</span> | <span class="k">Impact:</span> <span class="vr">CRITIQUE</span>',
+    '<span class="k">Mesures:</span> <span class="v">EDR + backup 3-2-1</span>'
+  ]}
+];
+let cmdIdx = 0, charIdx = 0, htPhase = 'type', outLine = 0;
+const htCmd = document.getElementById('ht-cmd');
+const htCur = document.getElementById('ht-cur');
+const htOut = document.getElementById('ht-out');
+function htTick() {
+  if (!htCmd) return;
+  const cur = CMDS[cmdIdx];
+  if (htPhase === 'type') {
+    htCmd.textContent = cur.cmd.slice(0, charIdx + 1);
+    charIdx++;
+    if (charIdx >= cur.cmd.length) { htPhase = 'wait'; setTimeout(htTick, 900); return; }
+    setTimeout(htTick, 55 + Math.random() * 30);
+  } else if (htPhase === 'wait') {
+    htCur.style.display = 'none';
+    htPhase = 'output'; outLine = 0;
+    setTimeout(htTick, 200);
+  } else {
+    if (outLine < cur.out.length) {
+      const d = document.createElement('div');
+      d.innerHTML = cur.out[outLine++];
+      htOut.appendChild(d);
+      setTimeout(htTick, 380);
+    } else {
+      setTimeout(() => {
+        htCmd.textContent = ''; htOut.innerHTML = '';
+        htCur.style.display = ''; charIdx = 0; htPhase = 'type'; outLine = 0;
+        cmdIdx = (cmdIdx + 1) % CMDS.length;
+        htTick();
+      }, 3200);
+    }
+  }
+}
+setTimeout(htTick, 1200);
+
+// ── COCKPIT TERMINAL ──
+const TSEQ = [
+  { cmd: 'rssi-status --mode extern', out: [{ k: 'ROLE', v: 'RSSI Externalisé', c: 'v' },{ k: 'STATUS', v: 'DISPONIBLE', c: 'v' }]},
+  { cmd: 'compliance --nis2 --iso27001', out: [{ k: 'NIS2', v: 'Analyse gap 48h', c: 'a' },{ k: 'ISO27001', v: 'Audit flash', c: 'v' }]}
+];
+let ti = 0, tc = 0, tPhase = 'type';
+const tCmd = document.getElementById('term-cmd');
+const tCur = document.getElementById('term-cursor');
+const tOut = document.getElementById('term-output');
+function termTick() {
+  if (!tCmd) return;
+  const cur = TSEQ[ti];
+  if (tPhase === 'type') {
+    tCmd.textContent = cur.cmd.slice(0, tc + 1);
+    tc++;
+    if (tc >= cur.cmd.length) { tPhase = 'show'; setTimeout(termTick, 700); return; }
+    setTimeout(termTick, 65 + Math.random() * 25);
+  } else if (tPhase === 'show') {
+    tOut.style.display = 'block';
+    tOut.innerHTML = cur.out.map(r => `<div><span class="k">${r.k}:</span> <span class="${r.c}">${r.v}</span></div>`).join('');
+    tPhase = 'clear'; setTimeout(termTick, 3000);
+  } else {
+    tOut.style.display = 'none'; tOut.innerHTML = '';
+    tCmd.textContent = ''; tc = 0; tPhase = 'type';
+    ti = (ti + 1) % TSEQ.length;
+    setTimeout(termTick, 500);
+  }
+}
+setTimeout(termTick, 1800);
+
+// ── THREAT COUNTER ──
+const threatEl = document.getElementById('threat-cnt');
+if (threatEl) {
+  let base = 1847;
+  setInterval(() => {
+    base += Math.floor(Math.random() * 3);
+    threatEl.textContent = base.toLocaleString('fr-FR');
+  }, 4000);
+}
+
+
+})();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 </html>
