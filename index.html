@@ -436,6 +436,10 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
 .fu{opacity:0;transform:translateY(28px);transition:opacity .6s,transform .6s}
 .fu.vis{opacity:1;transform:none}
 
+/* ON-DEMAND SECTIONS */
+#apropos,#contact{display:none !important}
+#apropos.reveal,#contact.reveal{display:block !important}
+
 /* RESPONSIVE */
 @media(max-width:1100px){
   .hero{grid-template-columns:1fr;grid-template-rows:auto auto;min-height:auto}
