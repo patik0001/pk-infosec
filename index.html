@@ -508,7 +508,7 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
     <li><a href="#ressources">Ressources</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#apropos">À propos</a></li>
-    <li><a href="#contact-footer">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-cta">Réserver un cadrage 30 min</button>
   <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -1246,6 +1246,30 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
 </section>
 
 <!-- FOOTER -->
+
+
+<section id="contact" class="contact-sec" style="padding:80px 28px;background:var(--surface);border-top:1px solid var(--border2);">
+  <div style="max-width:980px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;">
+    <div>
+      <div class="section-label">// Contact</div>
+      <h2 class="section-title" style="margin:8px 0 10px;">Parlons de votre besoin cyber</h2>
+      <p style="color:var(--muted);max-width:56ch;">Réponse sous 24h ouvrées. Ce formulaire envoie votre demande à l'équipe PK InfoSec.</p>
+      <form data-contact-form style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
+        <input name="name" placeholder="Nom" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);">
+        <input name="email" type="email" placeholder="Email" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);">
+        <input name="subject" placeholder="Sujet" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);">
+        <textarea name="message" placeholder="Message" rows="5" required style="padding:12px;border:1px solid var(--border2);background:#0a1118;color:var(--white);"></textarea>
+        <button class="btn-p" type="submit" style="width:max-content;">Envoyer la demande</button>
+      </form>
+      <p data-contact-status style="margin-top:10px;color:var(--muted);font-family:var(--mono);font-size:12px;"></p>
+    </div>
+    <div style="background:var(--panel);border:1px solid var(--border2);padding:20px;">
+      <div class="section-label">Infos</div>
+      <p style="margin-top:10px;color:var(--muted);">Audit flash 30 min, diagnostic conformité, RSSI as a Service.</p>
+      <p style="margin-top:14px;"><strong>Email</strong><br><a href="mailto:contact@pk-infosec.com">contact@pk-infosec.com</a></p>
+    </div>
+  </div>
+</section>
 <footer id="contact-footer">
   <div class="f-nl">
     <div>
