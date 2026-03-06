@@ -2982,9 +2982,28 @@ Pour personnalisation et accompagnement : contact@pk-infosec.com`
   }
 ];
 
+function downloadTextFallback(idx){
+  const r = RESOURCES[idx];
+  if(!r) return;
+  const blob = new Blob([r.content], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = r.name || `resource-${idx+1}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 1200);
+}
+
 function downloadResource(idx) {
   const r = RESOURCES[idx];
-  if(!window.jspdf){alert('Chargement du générateur PDF en cours, veuillez réessayer dans quelques secondes.');return;}
+  if(!r) return;
+  if(!window.jspdf){
+    console.warn('jsPDF indisponible, fallback TXT utilisé');
+    downloadTextFallback(idx);
+    return;
+  }
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
   const W = 210, H = 297;
