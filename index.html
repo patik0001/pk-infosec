@@ -1665,15 +1665,15 @@ body::before {
         </div>
       </div>
 
-      <div class="cf-fields">
+      <form class="cf-fields" data-contact-form>
         <div class="cf-row">
           <div class="cf-field">
             <label class="cf-label" for="cf-nom">Nom & Prénom</label>
-            <input type="text" id="cf-nom" class="cf-input" placeholder="Jean Dupont">
+            <input type="text" id="cf-nom" name="name" class="cf-input" placeholder="Jean Dupont" required>
           </div>
           <div class="cf-field">
             <label class="cf-label" for="cf-email">Email professionnel</label>
-            <input type="email" id="cf-email" class="cf-input" placeholder="j.dupont@entreprise.fr">
+            <input type="email" id="cf-email" name="email" class="cf-input" placeholder="j.dupont@entreprise.fr" required>
           </div>
         </div>
         <div class="cf-row">
@@ -1703,12 +1703,16 @@ body::before {
           </select>
         </div>
         <div class="cf-field">
-          <label class="cf-label" for="cf-message">Contexte & problématique</label>
-          <textarea id="cf-message" class="cf-input cf-textarea" placeholder="Décrivez votre situation en quelques lignes : secteur, taille, contexte réglementaire, incident récent, projet en cours... Toute information utile pour préparer notre échange."></textarea>
+          <label class="cf-label" for="cf-subject">Sujet</label>
+          <input type="text" id="cf-subject" name="subject" class="cf-input" placeholder="Ex: Audit flash" required>
         </div>
-        <button class="cf-submit" onclick="handleContactSubmit()">Envoyer la demande</button>
-        <p class="cf-note">🔒 Vos données ne sont jamais partagées ni revendues. Confidentialité garantie.</p>
-      </div>
+        <div class="cf-field">
+          <label class="cf-label" for="cf-message">Contexte & problématique</label>
+          <textarea id="cf-message" name="message" class="cf-input cf-textarea" placeholder="Décrivez votre situation en quelques lignes : secteur, taille, contexte réglementaire, incident récent, projet en cours..." required></textarea>
+        </div>
+        <button class="cf-submit" type="submit">Envoyer la demande</button>
+        <p data-form-status class="cf-note">🔒 Vos données ne sont jamais partagées ni revendues. Confidentialité garantie.</p>
+      </form>
     </div>
 
     <!-- ASIDE INFO -->
@@ -3636,5 +3640,7 @@ if (threatEl) {
 })();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="./frontend.config.js"></script>
+<script src="./frontend.js"></script>
 </body>
 </html>
