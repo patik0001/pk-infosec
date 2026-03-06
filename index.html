@@ -2982,6 +2982,26 @@ Pour personnalisation et accompagnement : contact@pk-infosec.com`
   }
 ];
 
+
+
+function bindResourceDownloadLinks(){
+  const links = document.querySelectorAll('.res-dl');
+  links.forEach((a, idx)=>{
+    const r = RESOURCES[idx];
+    if(!r) return;
+    try {
+      const blob = new Blob([r.content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      a.setAttribute('href', url);
+      a.setAttribute('download', r.name || `resource-${idx+1}.txt`);
+      a.onclick = null; // keep plain browser download path
+    } catch(e) {
+      console.warn('resource link bind failed', e);
+    }
+  });
+}
+bindResourceDownloadLinks();
+
 function downloadTextFallback(idx){
   const r = RESOURCES[idx];
   if(!r) return;
